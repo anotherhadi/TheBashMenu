@@ -1,7 +1,20 @@
-##############################################################
-#####             BY THE SMALL GOD @HADRIENAKA           #####
-#####  COMMAND SECTION  DON'T TOUCH AT MY CODE BITCHIES  #####
-##############################################################
+#! /bin/bash
+
+#//
+#//
+#//////////////////////////////////////////////////////////
+#//               By @HadrienAka
+#//////////////////////////////////////////////////////////
+#//
+#// Look, I spent more than 48 hours on this code.
+#// I have no idea how it works, but it does works.
+#// If ANYTHING happens to it, YOU will be the one
+#// who will spend the next many hours trying to fix it.
+#//
+#//////////////////////////////////////////////////////////
+#//
+#//
+
 command() {
 while true
 do
