@@ -53,6 +53,17 @@ printf "\n\r  My GitHub                                          "
 printf "\n\r  Credits                                     "
 printf "\n\r\e[1;96m> Exit                                          \e[0m"
 
+## ADD A NEW LINE :
+#                     |-  ADD 1 HERE
+#elif [[ $selected == 4 ]]; then 
+#tput rc
+#printf "\n\r\e[0;92m✓ \e[0m\e[1;77mThe Bash Menu \e[0;96m [Use arrows to move, enter to select]\e[0m"
+#printf "\n\r  See The Code                                          "
+#printf "\n\r  My GitHub                                          "
+#printf "\n\r  Credits                                     "
+#printf "\n\r\e[1;96m> Exit                                          \e[0m"
+# AND PAST YOUR NEW LINE HERE, COPY AND PAST IT FOR ALL THE ELIF BEHIND
+
 else
 selected=1
 display 
