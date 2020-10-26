@@ -1,29 +1,18 @@
 # Title
 ### Author: @hadrienaka
 ### Follow me on [![Twitter][1.2]][1]
+### Or on [![Github][6.1]][2]
 
 [1.2]: http://i.imgur.com/wWzX9uB.png (twitter icon without padding)
+[6.1]: http://i.imgur.com/0o48UoR.png (github icon with padding)
 
 
 [1]: https://twitter.com/hadrienaka
+[6]: http://www.github.com/hadrienaka
 
-## How it works?
-<p>When launching, xdotool takes the mouse position, if the mouse moves, then the script is launched, blocking any attempt, displaying an image in large screen then sleep the mac 15s after.</p>
+## How it works:
 
 
-### Need:
-U will need xdotool to launch this script, to download xdotool with brew go on your terminal then type :
-```bash
-brew install xquartz
-brew install xdotool
-```
+### Requirement:
 
-### Install lock:
-```bash
-git clone https://github.com/hadrienaka/lock
-./lock/lock
-```
-You need to change the image who will be in the full screen mode on the lock script
-
-### Follow me :
-### Twitter: https://twitter.com/hadrienaka
+### Install:
