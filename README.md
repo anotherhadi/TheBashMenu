@@ -1,6 +1,5 @@
 # The Bash Menu
-### Follow me on [![Twitter][1.2]][1] or on [![Github][6.1]][6]
-
+#### Here it is:
 ![](menugif.gif)
 
 [1.2]: http://i.imgur.com/tXSoThF.png (twitter icon without padding)
@@ -17,3 +16,6 @@ git clone https://github.com/hadrienaka/TheBashMenu
 cd TheBashMenu
 bash main.sh
 ```
+
+### Follow me on [![Twitter][1.2]][1] or on [![Github][6.1]][6]
+
