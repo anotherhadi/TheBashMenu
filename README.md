@@ -1,10 +1,11 @@
 # The Bash Menu
 ![](menugif.gif)
-
+#### A very useful script allowing you to create your own menu
 
 
 ### How it works:
-Press the up or down keys to navigate on the menu.
+Press the up or down keys to navigate on the menu and press enter to validate.
+To add a line, find the comment in the display function, it indicates the correct way to do it.
 
 ### Install:
 ```bash
