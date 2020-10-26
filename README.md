@@ -3,7 +3,7 @@
 
 <!-- Actual text -->
 
-Follow me on [![Twitter][1.2]][1]
+### Follow me on [![Twitter][1.2]][1]
 
 <!-- Icons -->
 
