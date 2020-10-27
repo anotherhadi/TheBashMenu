@@ -1,5 +1,5 @@
 # The Bash Menu
-![](menugif.gif)
+![](menu.gif)
 #### A very useful script allowing you to create your own menu.
 
 
@@ -16,7 +16,7 @@ bash install.sh
 ```
 
 ### Settings:
-![](settingsgif.gif)
+![](add.gif)
 <p>When you are on your menu, simply press the right arrow on your keyboard to go on the settings.</p>
 <p>Here, you can :
   -Create a new option
