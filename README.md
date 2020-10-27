@@ -5,7 +5,7 @@
 
 ### How it works:
 <p>Press the up or down keys to navigate on the menu and press enter to validate.</p>
-<p>Work on MacOs, Kali Linux, tell me if you have some issues with another os.</p>
+<p>Work on : MacOs, KaliLinux [And probably more, tell me if you try it]</p>
 
 ### Install:
 ```bash
