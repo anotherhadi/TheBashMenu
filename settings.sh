@@ -98,7 +98,7 @@ elif [[ $yn == "c" ]]; then
 vim enter.sh
 
 elif [[ $yn == "d" ]]; then 
-vim title
+vim title.sh
 
 elif [[ $yn == "e" ]]; then 
 open https://hadrienaka.fr/copy.html

@@ -3,7 +3,7 @@ tput sc
 tput civis
 selected=1
 how=$( cat .how.txt )
-source title
+source title.sh
 source enter.sh
 trap ctrl_c INT
 

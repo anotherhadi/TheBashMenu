@@ -1,7 +1,7 @@
 #/bin/bash
 rm README.md
-rm menugif.gif
-rm addgif.gif
+rm menu.gif
+rm add.gif
 chmod +x main.sh
 chmod +x addcommand.sh
 how=1
