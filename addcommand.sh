@@ -2,9 +2,10 @@
 
 
 read -p $'\n\e[0;92m+ \e[0m\e[1;77mCommand\'s Name: \e[0;96m' name
-read -p $'\n\e[0;92m+ \e[0m\e[1;77mActualy, how much command do you have?: \e[0;96m' how
-
+how=$( cat .how.txt )
 how=$(( $how+1 ))
+rm .how.txt
+echo $how > .how.txt
 
 # ADD SELECT TO ALL COMMAND
 
@@ -19,16 +20,16 @@ mv final.txt main.sh
 sed '/##newselect/a\
 elif [[ $selected == '$how' ]]; then\
 tput rc\
-printf "\\n\\r\\e[0;92m✓ \\e[0m\\e[1;77mThe Bash Menu \\e[0;96m [Use arrows to move, enter to select]\\e[0m"\
-printf "\\n\\r  See The Code                             "\
-printf "\\n\\r  My GitHub                                          "\
-printf "\\n\\r  Credits                                     "\
-printf "\\n\\r  Add                                          "\
+title\
+printf "\\n\\r  Option 1                             "\
+printf "\\n\\r  Option 2                                          "\
+printf "\\n\\r  Option 3                                     "\
 ##newtemp\
 ##tempnew\
 printf "\\n\\r\\e[1;96m> '$name'                               \\e[0m     "\
 ##newline\
 ##letsnew\
+position\
 ' main.sh > final.txt
 rm main.sh
 mv final.txt main.sh
@@ -57,8 +58,20 @@ rm main.sh
 mv final.txt main.sh
 
 sed '/##addcommand/a\
+\
+######## '$name'\
 elif [[ $selected == '$how' ]]; then\
 :\
+' enter.sh > final.txt
+rm enter.sh
+mv final.txt enter.sh
+
+sed '/##tputmore/a\
+tput cuu1\
+tput sc\
 ' main.sh > final.txt
 rm main.sh
 mv final.txt main.sh
+
+
+

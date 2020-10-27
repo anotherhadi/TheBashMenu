@@ -1,6 +1,34 @@
 #/bin/bash
 tput sc
+tput civis
 selected=1
+how=$( cat .how.txt )
+source title
+source enter.sh
+trap ctrl_c INT
+
+function ctrl_c() {
+  tput cnorm
+  tput rc
+  printf "\r\e[0;92mx \e[0m\e[1;77mGood Bye!                                                               \e[0m"
+  echo
+  exit
+}
+
+
+
+position () {
+tput sc
+tput cuu1
+tput sc
+tput cuu1
+tput sc
+tput cuu1
+tput sc
+##tputmore
+
+}
+
 commande() {
 while true
 do
@@ -11,6 +39,9 @@ display
 elif [[ $t == B ]]; then ###### When You Press Down
 selected=$(($selected + 1))
 display
+elif [[ $t == C ]]; then ##### When You Press Right
+bash settings.sh
+
 elif [[ $t == "" ]]; then ###### When You Press Enter
 enter
 fi
@@ -20,62 +51,39 @@ done
 display() {
 
   if [[ $selected == 1 ]]; then 
-tput rc 
-printf "\n\r\e[0;92m✓ \e[0m\e[1;77mThe Bash Menu \e[0;96m [Use arrows to move, enter to select]\e[0m"
-printf "\n\r\e[1;96m> See The Code                             \e[0m"
-printf "\n\r  My GitHub                                          "
-printf "\n\r  Credits                                     "
-printf "\n\r  Add                                          "
+
+tput rc
+title
+printf "\n\r\e[1;96m> Option 1                             \e[0m"
+printf "\n\r  Option 2                                          "
+printf "\n\r  Option 3                                     "
 ##newline
 ##letsnew
-
-
+position
 
 elif [[ $selected == 2 ]]; then 
 tput rc
-printf "\n\r\e[0;92m✓ \e[0m\e[1;77mThe Bash Menu \e[0;96m [Use arrows to move, enter to select]\e[0m"
-printf "\n\r  See The Code                                          "
-printf "\n\r\e[1;96m> My GitHub                             \e[0m"
-printf "\n\r  Credits                                     "
-printf "\n\r  Add                                          "
+title
+printf "\n\r  Option 1                                          "
+printf "\n\r\e[1;96m> Option 2                             \e[0m"
+printf "\n\r  Option 3                                     "
 ##newline
 ##letsnew
-
-
+position
 
 elif [[ $selected == 3 ]]; then 
 tput rc
-printf "\n\r\e[0;92m✓ \e[0m\e[1;77mThe Bash Menu \e[0;96m [Use arrows to move, enter to select]\e[0m"
-printf "\n\r  See The Code                                          "
-printf "\n\r  My GitHub                                          "
-printf "\n\r\e[1;96m> Credits                                     \e[0m"
-printf "\n\r  Add                                          "
+title
+printf "\n\r  Option 1                                          "
+printf "\n\r  Option 2                                          "
+printf "\n\r\e[1;96m> Option 3                                     \e[0m"
 ##newline
 ##letsnew
-
-
-
-elif [[ $selected == 4 ]]; then 
-tput rc
-printf "\n\r\e[0;92m✓ \e[0m\e[1;77mThe Bash Menu \e[0;96m [Use arrows to move, enter to select]\e[0m"
-printf "\n\r  See The Code                                          "
-printf "\n\r  My GitHub                                          "
-printf "\n\r  Credits                                     "
-printf "\n\r\e[1;96m> Add                                          \e[0m"
-##newline
-##letsnew
-
-
+position
 
 
 
 ##newselect
-
-
-
-
-
-
 
 
 
@@ -92,63 +100,6 @@ fi
 }
 
 
-enter () {
-  if [[ $selected == 1 ]]; then 
-    vim main.sh
-
-##addcommand
-
-
-
-
-
-  elif [[ $selected == 2 ]]; then
-    open https://github.com/hadrienaka
-
-  elif [[ $selected == 3 ]]; then 
-    open https://hadrienaka.fr/copy.html
-    
-  elif [[ $selected == 4 ]]; then 
-    bash addcommand.sh
-    name=$( cat nametemp.txt )
-
-sed '/##newtemp/a\
-printf "\\\\n\\\\r  '$name'                                          "\\\
-' addcommand.sh > final.txt
-rm addcommand.sh
-mv final.txt addcommand.sh
-rm nametemp.txt
-
-sed '/##newtemp/d' addcommand.sh > final.txt
-rm addcommand.sh
-mv final.txt addcommand.sh
-
-sed '/##tempnew/a\
-##newtemp\\\
-' addcommand.sh > final.txt
-rm addcommand.sh
-mv final.txt addcommand.sh
-
-sed '/##tempnew/d' addcommand.sh > final.txt
-rm addcommand.sh
-mv final.txt addcommand.sh
-
-sed '/##newtemp/a\
-##tempnew\\\
-' addcommand.sh > final.txt
-rm addcommand.sh
-mv final.txt addcommand.sh
-
-
-printf "\n\n\e[0;92m✓ \e[0m\e[1;77mAdded Succesfully! \e[0m"
-printf "\n\e[0;92m? \e[0;96mYou can now edit the command with: $ vim main.sh  \e[0m"
-printf "\n\e[0;92m? \e[0;96mAnd search the enter function.  \e[0m"
-printf "\n"
-printf "\n"
-sleep 2
-bash main.sh
-fi
-}
 
 display
 commande
