@@ -1,16 +1,12 @@
 enter () {
   if [[ $selected == 1 ]]; then 
-    vim main.sh
+    exit
 
-  elif [[ $selected == 2 ]]; then
-    open https://github.com/hadrienaka
-
-  elif [[ $selected == 3 ]]; then 
-    open https://hadrienaka.fr/copy.html
-    
+########################## Your command will be added here :
 ##addcommand
 
-
+  else
+  :
 fi
 }
 

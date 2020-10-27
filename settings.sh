@@ -68,10 +68,12 @@ mv final.txt addcommand.sh
 
 
 printf "\n\n\e[0;92m✓ \e[0m\e[1;77mAdded Succesfully! \e[0m"
-printf "\n\e[0;92m? \e[0;96mYou can now edit the command with: $ vim main.sh ,and search the enter function.  \e[0m"
+printf "\n\e[0;92m? \e[0;96mYou can now edit the command, just check the enter.sh file !  \e[0m"
 printf "\n"
-sleep 2
-clear
+printf "\n"
+printf "\n"
+printf "\n"
+sleep 1
 bash main.sh
 exit
 
@@ -80,18 +82,20 @@ exit
 ################################## DELETE
 
 elif [[ $yn == "b" ]]; then 
-  printf "\n\e[0;92m? \e[0m\e[1;77mName \e[0;90m [ Case sensitive ! ] :\e[0m"
-  read remove
-sed '/\\n\\r  '$remove'/d' addcommand.sh > final.txt
-rm addcommand.sh
-mv final.txt addcommand.sh
+printf "\n\n\e[0;92mx \e[0m\e[1;77mUnder Construction! \e[0m"
 
-sed '/\\n\\r  '$remove'/d' main.sh > final.txt
-rm main.sh
-mv final.txt main.sh
+#  printf "\n\e[0;92m? \e[0m\e[1;77mName \e[0;90m [ Case sensitive ! ] :\e[0m"
+#  read remove
+#sed '/\\n\\r  '$remove'/d' addcommand.sh > final.txt
+#rm addcommand.sh
+#mv final.txt addcommand.sh
+
+#sed '/\\n\\r  '$remove'/d' main.sh > final.txt
+#rm main.sh
+#mv final.txt main.sh
 
 elif [[ $yn == "c" ]]; then 
-:
+vim enter.sh
 
 elif [[ $yn == "d" ]]; then 
 vim title
