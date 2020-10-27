@@ -11,7 +11,8 @@ To add a line, find the comment in the display function, it indicates the correc
 ```bash
 git clone https://github.com/hadrienaka/TheBashMenu
 cd TheBashMenu
-bash main.sh
+chmod +x install.sh
+bash install.sh
 ```
 ### Add commands:
 ![](addgif.gif)
