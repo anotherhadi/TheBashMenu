@@ -4,8 +4,8 @@
 
 
 ### How it works:
-Press the up or down keys to navigate on the menu and press enter to validate.
-To add a line, find the comment in the display function, it indicates the correct way to do it.
+<p>Press the up or down keys to navigate on the menu and press enter to validate.</p>
+
 -> Work on MacOs, Kali Linux, tell me if you have some issues with another os.
 
 ### Install:
