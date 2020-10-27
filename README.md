@@ -16,7 +16,7 @@ bash install.sh
 ```
 
 ### Settings:
-![](addgif.gif)
+![](settingsgif.gif)
 <p>When you are on your menu, simply press the right arrow on your keyboard to go on the settings.</p>
 <p>Here, you can :
   -Create a new option
