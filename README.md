@@ -15,9 +15,10 @@ cd TheBashMenu
 chmod +x install.sh
 bash install.sh
 ```
-### Add commands:
+### Settings:
 ![](addgif.gif)
-
+In the settings, you can add a command, delete a command and change the title
+To go on the settings, just type the right arrow on your keyboard
 
 #### Follow me on [![Twitter][1.2]][1] or on [![Github][6.1]][6]
 [1.2]: http://i.imgur.com/tXSoThF.png (twitter icon without padding)
