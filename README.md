@@ -23,6 +23,7 @@ bash install.sh
 <p> -o  : Add options (Put a space between the options)</p>
 <p> -l  : link your command file (explained after)</p>
 <p>This is the command that displayed the menu above</p>
+
 ```bash
 bmenu -t "My Title" -s "[my subtitle]" -o "My Different Options" -l mycommand.sh
 ```
