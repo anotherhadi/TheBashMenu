@@ -52,7 +52,7 @@ fi
 export -f
 ```
 
-```
+```diff
 ! The function need to be call "enter", the var "selected" and don't miss to put "export -f"
 ! Don't forget to link this file with the -l argument
 ```
