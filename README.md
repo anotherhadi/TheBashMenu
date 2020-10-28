@@ -29,7 +29,7 @@ bmenu -t "My Title" -s "[my subtitle]" -o "My Different Options" -l mycommand.sh
 ```
 
 ### Add commands :
-<p> To add a command, create a bash file, and simply add : </p>
+<p> To add a command, create a bash file with : </p>
 
 ```bash
 # /!\ You need to call the function "enter", the var "selected" and add "export -f" /!\
@@ -47,6 +47,7 @@ fi
 }
 export -f
 ```
+<p> Don't forget to link this file with the -l argument
   
  
 
