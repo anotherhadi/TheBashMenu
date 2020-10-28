@@ -28,8 +28,10 @@ bash install.sh
 bmenu -t "My Title" -s "[my subtitle]" -o "My Different Options" -l mycommand.sh
 ```
 
-
-
+### Add commands :
+<p> To add a command, create a bash file, and simply add:
+  
+ 
 
 #### Follow me on [![Twitter][1.2]][1] or on [![Github][6.1]][6]
 [1.2]: http://i.imgur.com/tXSoThF.png (twitter icon without padding)
