@@ -4,7 +4,8 @@
 
 
 ### How it works:
-<p>Create a new file,</p>
+<p>Create your own beautiful menu with a simple command, add a title, a subtitle and
+add up to 10 options !</p>
 <p>Work on : MacOs, KaliLinux [And probably more, tell me if you try it]</p>
 
 ### Install:
@@ -14,14 +15,19 @@ cd TheBashMenu
 bash install.sh
 ```
 
-### Settings:
+### Settings/Arguments:
 ![](add.gif)
-<p>When you are on your menu, simply press the right arrow on your keyboard to go on the settings.</p>
-<p>Here, you can :</p>
-<p>  -Create a new option</p>
-<p>  -Delete a option</p>
-<p>  -Modify the command linked to the option</p>
-<p>  -Change title</p>
+<p>To create your own menu use these arguments :</p>
+<p> -t  : Change the title</p>
+<p> -s  : Change the subtitle</p>
+<p> -o  : Add options (Put a space between the options)</p>
+<p> -l  : link your command file (explained after)</p>
+<p>This is the command that displayed the menu above</p>
+```bash
+bmenu -t "My Title" -s "[my subtitle]" -o "My Different Options" -l mycommand.sh
+````
+
+
 
 
 #### Follow me on [![Twitter][1.2]][1] or on [![Github][6.1]][6]
