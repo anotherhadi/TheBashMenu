@@ -18,18 +18,15 @@ bash install.sh
 ### Create a new menu/Arguments:
 ![](exemples.gif)
 ```diff
-- text in red
-+ text in green
 ! Arguments :
-# text in gray - test
-@@# text in gray @@
-# text in gray
-@@ text in purple (and bold)@@
+
+-h, --help               Show brief help
+-t, --title              Edit the title
+-s, --subtitle           Edit the subtitle
+-o, --option             Edit all the options
+-l, --link               Link your command file (see further
+
 ```
-```html
-<span style="color:orange;">Word up</span>
-```
-<p>This is the command that displayed the menu above</p>
 
 
 ```bash
