@@ -34,10 +34,11 @@ bash install.sh
 ```
 
 ### Add commands :
-<p> To add a command, create a bash file with : </p>
-
+<p> Create a new file (.sh), then paste:
+```diff
+! The function need to be call "enter", the var "selected" and don't miss to put "export -f"
+```
 ```bash
-# /!\ You need to call the function "enter", the var "selected" and add "export -f" /!\
 enter () {
   if [[ $selected == 1 ]]; then 
     echo "By HadrienAka"
@@ -52,12 +53,10 @@ fi
 }
 export -f
 ```
-<p> Don't forget to link this file with the -l argument
+<p> /!\ Don't forget to link this file with the -l argument </p>
   
  
 
-#### Follow me on [![Twitter][1.2]][1] or on [![Github][6.1]][6]
-[1.2]: http://i.imgur.com/tXSoThF.png (twitter icon without padding)
-[6.1]: http://i.imgur.com/0o48UoR.png (github icon with padding)
-[1]: https://twitter.com/hadrienaka
-[6]: http://www.github.com/hadrienaka
+![Twitter Follow](https://img.shields.io/twitter/follow/hadrienaka?label=%40HadrienAka&logo=twitter&logoColor=ffffff&style=for-the-badge)
+![GitHub followers](https://img.shields.io/github/followers/hadrienaka?color=9F9F9F&label=%40HadrienAka&logo=github&style=for-the-badge)
+![Website](https://img.shields.io/website?color=9F9F9F&label=Hadrienaka.fr&logo=brave&logoColor=ffffff&style=for-the-badge&up_message=SEE&url=https%3A%2F%2Fhadrienaka.fr)
