@@ -26,6 +26,7 @@ bash install.sh
 # text in gray
 @@ text in purple (and bold)@@
 ```
+<span style="color:orange;">Word up</span>
 <p>This is the command that displayed the menu above</p>
 
 ```bash
