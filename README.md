@@ -30,7 +30,7 @@ bash install.sh
 <p> This input created the menu above </p>
 
 ```bash
-./~/.bmenu -t "My Title" -s "[my subtitle]" -o "My Different Options" -l mycommand.sh
+./~/.bmenu -t "My First Menu" -s "[Use arrows to move]" -o "Exit hadrienaka.fr Twitter" -l MyFirstMenu.sh
 ```
 
 ### Add commands :
