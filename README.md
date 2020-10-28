@@ -20,7 +20,9 @@ bash install.sh
 ```diff
 - text in red
 + text in green
-! text in orange
+! Arguments :
+# text in gray - test
+@@# text in gray @@
 # text in gray
 @@ text in purple (and bold)@@
 ```
