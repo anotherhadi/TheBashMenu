@@ -17,11 +17,13 @@ bash install.sh
 
 ### Create a new menu/Arguments:
 ![](exemples.gif)
-<p>To create your own menu use these arguments :</p>
-<p> -t  : Change the title</p>
-<p> -s  : Change the subtitle</p>
-<p> -o  : Add options (Put a space between the options)</p>
-<p> -l  : link your command file (explained after)</p>
+```diff
+- text in red
++ text in green
+! text in orange
+# text in gray
+@@ text in purple (and bold)@@
+```
 <p>This is the command that displayed the menu above</p>
 
 ```bash
