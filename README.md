@@ -29,7 +29,24 @@ bmenu -t "My Title" -s "[my subtitle]" -o "My Different Options" -l mycommand.sh
 ```
 
 ### Add commands :
-<p> To add a command, create a bash file, and simply add:
+<p> To add a command, create a bash file, and simply add : </p>
+
+```bash
+# /!\ You need to call the function "enter", the var "selected" and add "export -f" /!\
+enter () {
+  if [[ $selected == 1 ]]; then 
+    echo "By HadrienAka"
+
+  elif [[ $selected == 2 ]]; then 
+    open https://github.com/HadrienAka
+
+  elif [[ $selected == 3 ]]; then 
+    open https://twitter.com/HadrienAka
+
+fi
+}
+export -f
+```
   
  
 
