@@ -34,10 +34,8 @@ bash install.sh
 ```
 
 ### Add commands :
-<p> Create a new file (.sh), then paste:
-```diff
-! The function need to be call "enter", the var "selected" and don't miss to put "export -f"
-```
+<p> Create a new file (.sh), then paste:</p>
+
 ```bash
 enter () {
   if [[ $selected == 1 ]]; then 
@@ -53,8 +51,11 @@ fi
 }
 export -f
 ```
-<p> /!\ Don't forget to link this file with the -l argument </p>
-  
+
+```
+! The function need to be call "enter", the var "selected" and don't miss to put "export -f"
+! Don't forget to link this file with the -l argument
+```
  
 
 ![Twitter Follow](https://img.shields.io/twitter/follow/hadrienaka?label=%40HadrienAka&logo=twitter&logoColor=ffffff&style=for-the-badge)
