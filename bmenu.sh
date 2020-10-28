@@ -111,33 +111,43 @@ for command in $option
 do
     if [[ $i == 1 ]]; then
     option1=$command
+    option1=$( echo $option1 | tr /  \  )
 
     elif [[ $i == 2 ]]; then
     option2=$command
+    option2=$( echo $option2 | tr /  \  )
 
     elif [[ $i == 3 ]]; then
     option3=$command
+    option3=$( echo $option3 | tr /  \  )
 
     elif [[ $i == 4 ]]; then
     option4=$command
+    option4=$( echo $option4 | tr /  \  )
 
     elif [[ $i == 5 ]]; then
     option5=$command
+    option5=$( echo $option5 | tr /  \  )
 
     elif [[ $i == 6 ]]; then
     option6=$command
+    option6=$( echo $option6 | tr /  \  )
 
     elif [[ $i == 7 ]]; then
     option7=$command
+    option7=$( echo $option7 | tr /  \  )
 
     elif [[ $i == 8 ]]; then
     option8=$command
+    option8=$( echo $option8 | tr /  \  )
 
     elif [[ $i == 9 ]]; then
     option9=$command
+    option9=$( echo $option9 | tr /  \  )
 
     elif [[ $i == 10 ]]; then
     option10=$command
+    option10=$( echo $option10 | tr /  \  )
     fi
     i=$((i + 1));
 
