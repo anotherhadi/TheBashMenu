@@ -1,7 +1,15 @@
 #! /bin/bash
-tput sc
-tput civis
 
+############################################ EXIT IF NO ARGUMENTS
+empty () {
+printf "\n\e[0;92mx \e[0m\e[1;77mAdd arguments. \e[0;96m [type \"bmenu --help\" to get help]\e[0m"
+printf "\n"
+echo
+exit 0
+}
+[ -z "$1" ] && empty
+
+############################################# TRAP CTRL C
 trap ctrl_c INT
 
 function ctrl_c() {
@@ -12,19 +20,89 @@ function ctrl_c() {
   exit
 }
 
-while getopts t:s:o:l: flag
-do
-    case "${flag}" in
-        t) title=${OPTARG};;
-        s) subtitle=${OPTARG};;
-        o) option=${OPTARG};;
-        l) linkfile=${OPTARG};;
-    esac
+############################################# ARGUMENTS
+while test $# -gt 0; do
+  case "$1" in
+
+    -h|--help)
+     printf "\n"
+  printf "\e[0;92m✓ \e[0m\e[1;77mThe Bash Menu\e[0;96m [By @HadrienAka]\e[0m"
+  printf "\n"
+  printf "\n"
+  printf "\n\e[1;77mArguments :\e[0m"
+  printf "\n\e[1;92m-h, --help            \e[0m\e[1;77mShow brief help\e[0m"
+  printf "\n\e[1;92m-t, --title           \e[0m\e[1;77mEdit the title\e[0m"
+  printf "\n\e[1;92m-s, --subtitle        \e[0m\e[1;77mEdit the subtitle\e[0m"
+  printf "\n\e[1;92m-o, --option          \e[0m\e[1;77mEdit all the options\e[0m"
+  printf "\n\e[1;92m-l, --link            \e[0m\e[1;77mLink your command file\e[0m"
+  printf "\n"
+  printf "\n\e[0;92m? \e[0m\e[1;77mMore information :  \e[0;96mhttps://github.com/hadrienaka/TheBashMenu \e[0m"
+  echo
+      exit 0
+      ;;
+      
+    -t|--title)
+      shift
+      if test $# -gt 0; then
+        export title=$1
+      else
+        echo "Please, add a title"
+        exit 0
+      fi
+      shift
+      ;;
+
+    -s|--subtitle)
+      shift
+      if test $# -gt 0; then
+        export subtitle=$1
+      else
+        echo "Please, add a subtitle"
+        exit 0
+      fi
+      shift
+      ;;
+
+    -o|--option)
+      shift
+      if test $# -gt 0; then
+        export option=$1
+      else
+        echo "Please, add options"
+    exit 0
+      fi
+      shift
+      ;;
+
+    -l|--link)
+      shift
+      if test $# -gt 0; then
+        export linkfile=$1
+      else
+        echo "Add your command file with the -l argument"
+        exit 0
+      fi
+      shift
+      ;;
+
+
+    *)
+      break
+      ;;
+  esac
 done
 
-source $linkfile
+####################################################### GIVE OPTIONS VAR TO $COMMAND
 
+if [ -z "$linkfile" ]
+then
+      :
+else
+      source $linkfile
+fi
 
+tput sc
+tput civis
 i=1;
 for command in $option
 do
