@@ -16,7 +16,7 @@ bash install.sh
 ```
 
 ### Create a new menu/Arguments:
-![](add.gif)
+![](exemples.gif)
 <p>To create your own menu use these arguments :</p>
 <p> -t  : Change the title</p>
 <p> -s  : Change the subtitle</p>
