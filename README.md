@@ -4,7 +4,7 @@
 
 
 ### How it works:
-<p>Press the up or down keys to navigate on the menu and press enter to validate.</p>
+<p>Create a new file,</p>
 <p>Work on : MacOs, KaliLinux [And probably more, tell me if you try it]</p>
 
 ### Install:
