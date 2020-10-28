@@ -25,7 +25,7 @@ bash install.sh
 <p>This is the command that displayed the menu above</p>
 ```bash
 bmenu -t "My Title" -s "[my subtitle]" -o "My Different Options" -l mycommand.sh
-````
+```
 
 
 
