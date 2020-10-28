@@ -27,6 +27,7 @@ bash install.sh
 -l, --link               Link your command file (see further)
 
 ```
+<p> If you want a space in an option, replace that space with / </p>
 <p> This input created the menu above </p>
 
 ```bash
