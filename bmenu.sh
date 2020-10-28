@@ -5,7 +5,7 @@
 
 ############################################ EXIT IF NO ARGUMENTS
 empty () {
-printf "\n\e[0;92mx \e[0m\e[1;77mAdd arguments. \e[0;96m [type \"bmenu --help\" to get help]\e[0m"
+printf "\n\e[0;91mx \e[0m\e[1;77mAdd arguments. \e[0;96m [type \"bmenu --help\" to get help]\e[0m"
 printf "\n"
 echo
 exit 0
@@ -18,7 +18,7 @@ trap ctrl_c INT
 function ctrl_c() {
   tput cnorm
   tput rc
-  printf "\r\e[0;92mx \e[0m\e[1;77mGood Bye!                                                               \e[0m"
+  printf "\r\e[0;91mx \e[0m\e[1;77mGood Bye!                                                               \e[0m"
   echo
   exit
 }
@@ -49,7 +49,7 @@ while test $# -gt 0; do
       if test $# -gt 0; then
         export title=$1
       else
-        echo "Please, add a title"
+        printf "\n\e[0;91mx \e[0m\e[1;77mError: No Title\e[0m"
         exit 0
       fi
       shift
@@ -60,7 +60,7 @@ while test $# -gt 0; do
       if test $# -gt 0; then
         export subtitle=$1
       else
-        echo "Please, add a subtitle"
+        printf "\n\e[0;91mx \e[0m\e[1;77mError: No Subtitle\e[0m"
         exit 0
       fi
       shift
@@ -71,7 +71,7 @@ while test $# -gt 0; do
       if test $# -gt 0; then
         export option=$1
       else
-        echo "Please, add options"
+        printf "\n\e[0;91mx \e[0m\e[1;77mError: No Option\e[0m"
     exit 0
       fi
       shift
@@ -82,7 +82,7 @@ while test $# -gt 0; do
       if test $# -gt 0; then
         export linkfile=$1
       else
-        echo "Add your command file with the -l argument"
+        printf "\n\e[0;91mx \e[0m\e[1;77mError: No Link\e[0m"
         exit 0
       fi
       shift
