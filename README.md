@@ -23,11 +23,11 @@ bash install.sh
 -h, --help               Show brief help
 -t, --title              Edit the title
 -s, --subtitle           Edit the subtitle
--o, --option             Edit all the options
--l, --link               Link your command file (see further
+-o, --option             Edit all the options (Put a space between them)
+-l, --link               Link your command file (see further)
 
 ```
-
+<p> This input created the menu above </p>
 
 ```bash
 ./~/.bmenu -t "My Title" -s "[my subtitle]" -o "My Different Options" -l mycommand.sh
