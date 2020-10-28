@@ -6,6 +6,7 @@
 ### How it works:
 <p>Create your own beautiful menu with a simple command, add a title, a subtitle and
 add up to 10 options !</p>
+<p>There is a file named "elements.sh" containing different example input, output and an example menu</p>
 <p>Work on : MacOs, KaliLinux [And probably more, tell me if you try it]</p>
 
 ### Install:
