@@ -16,7 +16,8 @@ bash install.sh
 ```
 
 ### Create Your Own Menu :
-<p>La commande n'est pas ajouter pour l'instant au path. Donc remplacez "bmenu" par "./~/.bmenu"</p>
+![](menuexemple.gif)
+
 <p> Create a new bash file (.sh), then paste:</p>
 
 ```bash
@@ -35,7 +36,7 @@ bash install.sh
   fi
   }
 
-  source bmenu -t "Menu Title" -s "[SubTitle]" -o "Option 1,Option 2,Option 3"
+  source ~/.bmenu -t "Menu Title" -s "[SubTitle]" -o "Option 1,Option 2,Option 3"
 
 ```
 
@@ -46,7 +47,7 @@ bash install.sh
 ```
 
 ### Arguments:
-![](exemples.gif)
+
 ```diff
 ! Arguments :
 
@@ -58,11 +59,13 @@ bash install.sh
 
 ! If you link the menu with the command of another bash file, put "export -f" on your commandnamefile.sh and the arguments "-l commandnamefile.sh" to the bmenu command.
 ```
-<p> This input created the menu above : </p>
+<p> Here is an exemple with the -l arguments : </p>
 
 ```bash
 bmenu -t "My First Menu" -s "[Use arrows to move]" -o "Exit,hadrienaka.fr,Twitter" -l MyFirstMenu.sh
+# In the MyFirstMenu.sh there is : the enter function, the selected var and "export -f"
 ```
+
 
 ![Twitter Follow](https://img.shields.io/twitter/follow/hadrienaka?label=%40HadrienAka&logo=twitter&logoColor=ffffff&style=for-the-badge)
 ![GitHub followers](https://img.shields.io/github/followers/hadrienaka?color=9F9F9F&label=%40HadrienAka&logo=github&style=for-the-badge)
