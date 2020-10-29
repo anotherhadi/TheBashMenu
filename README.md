@@ -25,7 +25,7 @@ bash install.sh
 -t, --title              Edit the title
 -s, --subtitle           Edit the subtitle
 -o, --option             Edit all the options (Put a comma between them)
--l, --link               Link your command file (see further)
+-l, --link               Link another command file
 
 ```
 <p> Add "" after an arguments if there is more than one word.</p>
@@ -36,31 +36,32 @@ bash install.sh
 ./~/.bmenu -t "My First Menu" -s "[Use arrows to move]" -o "Exit,hadrienaka.fr,Twitter" -l MyFirstMenu.sh
 ```
 
-### Add commands :
+### Basic Menu :
 <p> Create a new bash file (.sh), then paste:</p>
 
 ```bash
-enter () {
-  if [[ $selected == 1 ]]; then 
+  enter () {
+    if [[ $selected == 1 ]]; then 
       #This is Option 1
       #Type Your command here
 
-  elif [[ $selected == 2 ]]; then 
+    elif [[ $selected == 2 ]]; then 
       #This is Option 2
       #Type Your command here
 
-  elif [[ $selected == 3 ]]; then # Copy/paste this for more options, change the 3 to 4
+    elif [[ $selected == 3 ]]; then    # You can copy/paste this for more options, change the 3 to 4
       #This is Option 3
       #Type Your command here
+  fi
+  }
 
-fi
-}
-export -f
+  source bmenu -t "Menu Title" -s "[SubTitle]" -o "Option 1,Option 2,Option 3"
+
 ```
 
 ```diff
-! The function need to be call "enter", the var "selected" and don't miss to put "export -f"
-! Don't forget to link this file with the -l argument
+! The function need to be call "enter" and the var "selected".
+! If you link the menu with the command of another bash file, put "export -f" on your commandnamefile.sh and the arguments "-l commandnamefile.sh" to the bmenu command.
 ```
  
 
