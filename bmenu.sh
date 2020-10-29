@@ -37,7 +37,7 @@ while test $# -gt 0; do
   printf "\n\e[1;92m-t, --title           \e[0m\e[1;77mEdit the title\e[0m"
   printf "\n\e[1;92m-s, --subtitle        \e[0m\e[1;77mEdit the subtitle\e[0m"
   printf "\n\e[1;92m-o, --option          \e[0m\e[1;77mEdit all the options (Put a comma between them)\e[0m"
-  printf "\n\e[1;92m-l, --link            \e[0m\e[1;77mLink your command file\e[0m"
+  printf "\n\e[1;92m-l, --link            \e[0m\e[1;77mLink another command file\e[0m"
   printf "\n"
   printf "\n\e[0;92m? \e[0m\e[1;77mMore information :  \e[0;96mhttps://github.com/hadrienaka/TheBashMenu \e[0m"
   echo
@@ -99,7 +99,7 @@ done
 
 if [ -z "$linkfile" ]
 then
-      :
+  type enter &>/dev/null && : || printf "\e[0;91mx \e[0m\e[1;77menter() not find !\e[0m\n"
 else
   source $linkfile &>/dev/null
   type enter &>/dev/null && : || printf "\e[0;91mx \e[0m\e[1;77menter() not find !\e[0m\n"

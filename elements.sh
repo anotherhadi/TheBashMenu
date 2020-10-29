@@ -56,28 +56,26 @@
 
 
 
- ____________________Menu Template___________________
+ #____________________Menu Template___________________
 
   # Menu Template :
 
-  bmenu -t "Menu Title" -s "[SubTitle]" -o "Option/1 Option/2 Option/3" -l TheNameOfTheFilePath.sh
-
-  # Add somewhere TheNameOfTheFile.sh :
-  # /!\ Keep "enter","selected" and "export -f"
   enter () {
     if [[ $selected == 1 ]]; then 
       #This is Option 1
       #Type Your command here
-
+      :
     elif [[ $selected == 2 ]]; then 
       #This is Option 2
       #Type Your command here
-
+      :
     elif [[ $selected == 3 ]]; then    # You can copy/paste this for more options, change the 3 to 4
       #This is Option 3
       #Type Your command here
-
+      :
   fi
   }
-  export -f
+
+  source bmenu -t "Menu Title" -s "[SubTitle]" -o "Option 1,Option 2,Option 3"
+
 
