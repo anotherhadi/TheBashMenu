@@ -62,6 +62,7 @@ bash install.sh
 ```
 
 ### Alternative Menu
+![](menualternative.jpg)
 
 <p> The alternative menu may be a better choice when you have more than 7 options </p>
 <p> To display an alternative menu, just add "-a" or "--alternative" at the end of your command. </p>
