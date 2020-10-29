@@ -163,11 +163,11 @@ i=$((i - 1));
 
 enterbis () {
 testenter=0
-printf "\r\e                                                                            "
+printf "\r                                                                            "
 while (( $testenter != $i ))
 do
 testenter=$((testenter + 1));
-printf "\n\r\e                                                                             "
+printf "\n\r                                                                             "
 done
 tput rc
 tput sc
@@ -214,7 +214,7 @@ if [[ $selected == 1 ]]; then
 tput rc
 thetitle
 printf "\n\r\e[1;96m> $option1                             \e[0m"
-printf "\n\r\e  $option2                                   "
+printf "\n\r  $option2                                   "
 tput sc
 for i in {1..2}
 do 
@@ -225,7 +225,7 @@ done
 elif [[ $selected == 2 ]]; then 
 tput rc
 thetitle
-printf "\n\r\e  $option1                                   "
+printf "\n\r  $option1                                   "
 printf "\n\r\e[1;96m> $option2                             \e[0m"
 tput sc
 for i in {1..2}
@@ -263,8 +263,8 @@ if [[ $selected == 1 ]]; then
 tput rc
 thetitle
 printf "\n\r\e[1;96m> $option1                             \e[0m"
-printf "\n\r\e  $option2                                   "
-printf "\n\r\e  $option3                                   "
+printf "\n\r  $option2                                   "
+printf "\n\r  $option3                                   "
 
 tput sc
 for i in {1..3}
@@ -276,9 +276,9 @@ done
 elif [[ $selected == 2 ]]; then 
 tput rc
 thetitle
-printf "\n\r\e  $option1                                   "
+printf "\n\r  $option1                                   "
 printf "\n\r\e[1;96m> $option2                             \e[0m"
-printf "\n\r\e  $option3                                   "
+printf "\n\r  $option3                                   "
 
 tput sc
 for i in {1..3}
@@ -290,8 +290,8 @@ done
 elif [[ $selected == 3 ]]; then 
 tput rc
 thetitle
-printf "\n\r\e  $option1                                   "
-printf "\n\r\e  $option2                                   "
+printf "\n\r  $option1                                   "
+printf "\n\r  $option2                                   "
 printf "\n\r\e[1;96m> $option3                             \e[0m"
 
 tput sc
@@ -330,9 +330,9 @@ if [[ $selected == 1 ]]; then
 tput rc
 thetitle
 printf "\n\r\e[1;96m> $option1                             \e[0m"
-printf "\n\r\e  $option2                                   "
-printf "\n\r\e  $option3                                   "
-printf "\n\r\e  $option4                                   "
+printf "\n\r  $option2                                   "
+printf "\n\r  $option3                                   "
+printf "\n\r  $option4                                   "
 
 tput sc
 for i in {1..4}
@@ -344,10 +344,10 @@ done
 elif [[ $selected == 2 ]]; then 
 tput rc
 thetitle
-printf "\n\r\e  $option1                                   "
+printf "\n\r  $option1                                   "
 printf "\n\r\e[1;96m> $option2                             \e[0m"
-printf "\n\r\e  $option3                                   "
-printf "\n\r\e  $option4                                   "
+printf "\n\r  $option3                                   "
+printf "\n\r  $option4                                   "
 
 tput sc
 for i in {1..4}
@@ -359,10 +359,10 @@ done
 elif [[ $selected == 3 ]]; then 
 tput rc
 thetitle
-printf "\n\r\e  $option1                                   "
-printf "\n\r\e  $option2                                   "
+printf "\n\r  $option1                                   "
+printf "\n\r  $option2                                   "
 printf "\n\r\e[1;96m> $option3                             \e[0m"
-printf "\n\r\e  $option4                                   "
+printf "\n\r  $option4                                   "
 
 tput sc
 for i in {1..4}
@@ -374,9 +374,9 @@ done
 elif [[ $selected == 4 ]]; then 
 tput rc
 thetitle
-printf "\n\r\e  $option1                                   "
-printf "\n\r\e  $option2                                   "
-printf "\n\r\e  $option3                                   "
+printf "\n\r  $option1                                   "
+printf "\n\r  $option2                                   "
+printf "\n\r  $option3                                   "
 printf "\n\r\e[1;96m> $option4                             \e[0m"
 
 tput sc
@@ -416,10 +416,10 @@ if [[ $selected == 1 ]]; then
 tput rc
 thetitle
 printf "\n\r\e[1;96m> $option1                             \e[0m"
-printf "\n\r\e  $option2                                   "
-printf "\n\r\e  $option3                                   "
-printf "\n\r\e  $option4                                   "
-printf "\n\r\e  $option5                                   "
+printf "\n\r  $option2                                   "
+printf "\n\r  $option3                                   "
+printf "\n\r  $option4                                   "
+printf "\n\r  $option5                                   "
 
 tput sc
 for i in {1..5}
@@ -431,11 +431,11 @@ done
 elif [[ $selected == 2 ]]; then 
 tput rc
 thetitle
-printf "\n\r\e  $option1                                   "
+printf "\n\r  $option1                                   "
 printf "\n\r\e[1;96m> $option2                             \e[0m"
-printf "\n\r\e  $option3                                   "
-printf "\n\r\e  $option4                                   "
-printf "\n\r\e  $option5                                   "
+printf "\n\r  $option3                                   "
+printf "\n\r  $option4                                   "
+printf "\n\r  $option5                                   "
 
 tput sc
 for i in {1..5}
@@ -447,11 +447,11 @@ done
 elif [[ $selected == 3 ]]; then 
 tput rc
 thetitle
-printf "\n\r\e  $option1                                   "
-printf "\n\r\e  $option2                                   "
+printf "\n\r  $option1                                   "
+printf "\n\r  $option2                                   "
 printf "\n\r\e[1;96m> $option3                             \e[0m"
-printf "\n\r\e  $option4                                   "
-printf "\n\r\e  $option5                                   "
+printf "\n\r  $option4                                   "
+printf "\n\r  $option5                                   "
 
 tput sc
 for i in {1..5}
@@ -463,11 +463,11 @@ done
 elif [[ $selected == 4 ]]; then 
 tput rc
 thetitle
-printf "\n\r\e  $option1                                   "
-printf "\n\r\e  $option2                                   "
-printf "\n\r\e  $option3                                   "
+printf "\n\r  $option1                                   "
+printf "\n\r  $option2                                   "
+printf "\n\r  $option3                                   "
 printf "\n\r\e[1;96m> $option4                             \e[0m"
-printf "\n\r\e  $option5                                   "
+printf "\n\r  $option5                                   "
 
 tput sc
 for i in {1..5}
@@ -479,10 +479,10 @@ done
 elif [[ $selected == 5 ]]; then 
 tput rc
 thetitle
-printf "\n\r\e  $option1                                   "
-printf "\n\r\e  $option2                                   "
-printf "\n\r\e  $option3                                   "
-printf "\n\r\e  $option4                                   "
+printf "\n\r  $option1                                   "
+printf "\n\r  $option2                                   "
+printf "\n\r  $option3                                   "
+printf "\n\r  $option4                                   "
 printf "\n\r\e[1;96m> $option5                             \e[0m"
 
 tput sc
@@ -521,11 +521,11 @@ if [[ $selected == 1 ]]; then
 tput rc
 thetitle
 printf "\n\r\e[1;96m> $option1                             \e[0m"
-printf "\n\r\e  $option2                                   "
-printf "\n\r\e  $option3                                   "
-printf "\n\r\e  $option4                                   "
-printf "\n\r\e  $option5                                   "
-printf "\n\r\e  $option6                                   "
+printf "\n\r  $option2                                   "
+printf "\n\r  $option3                                   "
+printf "\n\r  $option4                                   "
+printf "\n\r  $option5                                   "
+printf "\n\r  $option6                                   "
 
 tput sc
 for i in {1..6}
@@ -537,12 +537,12 @@ done
 elif [[ $selected == 2 ]]; then 
 tput rc
 thetitle
-printf "\n\r\e  $option1                                   "
+printf "\n\r  $option1                                   "
 printf "\n\r\e[1;96m> $option2                             \e[0m"
-printf "\n\r\e  $option3                                   "
-printf "\n\r\e  $option4                                   "
-printf "\n\r\e  $option5                                   "
-printf "\n\r\e  $option6                                   "
+printf "\n\r  $option3                                   "
+printf "\n\r  $option4                                   "
+printf "\n\r  $option5                                   "
+printf "\n\r  $option6                                   "
 
 tput sc
 for i in {1..6}
@@ -554,12 +554,12 @@ done
 elif [[ $selected == 3 ]]; then 
 tput rc
 thetitle
-printf "\n\r\e  $option1                                   "
-printf "\n\r\e  $option2                                   "
+printf "\n\r  $option1                                   "
+printf "\n\r  $option2                                   "
 printf "\n\r\e[1;96m> $option3                             \e[0m"
-printf "\n\r\e  $option4                                   "
-printf "\n\r\e  $option5                                   "
-printf "\n\r\e  $option6                                   "
+printf "\n\r  $option4                                   "
+printf "\n\r  $option5                                   "
+printf "\n\r  $option6                                   "
 
 tput sc
 for i in {1..6}
@@ -571,12 +571,12 @@ done
 elif [[ $selected == 4 ]]; then 
 tput rc
 thetitle
-printf "\n\r\e  $option1                                   "
-printf "\n\r\e  $option2                                   "
-printf "\n\r\e  $option3                                   "
+printf "\n\r  $option1                                   "
+printf "\n\r  $option2                                   "
+printf "\n\r  $option3                                   "
 printf "\n\r\e[1;96m> $option4                             \e[0m"
-printf "\n\r\e  $option5                                   "
-printf "\n\r\e  $option6                                   "
+printf "\n\r  $option5                                   "
+printf "\n\r  $option6                                   "
 
 tput sc
 for i in {1..6}
@@ -588,12 +588,12 @@ done
 elif [[ $selected == 5 ]]; then 
 tput rc
 thetitle
-printf "\n\r\e  $option1                                   "
-printf "\n\r\e  $option2                                   "
-printf "\n\r\e  $option3                                   "
-printf "\n\r\e  $option4                                   "
+printf "\n\r  $option1                                   "
+printf "\n\r  $option2                                   "
+printf "\n\r  $option3                                   "
+printf "\n\r  $option4                                   "
 printf "\n\r\e[1;96m> $option5                             \e[0m"
-printf "\n\r\e  $option6                                   "
+printf "\n\r  $option6                                   "
 
 tput sc
 for i in {1..6}
@@ -605,11 +605,11 @@ done
 elif [[ $selected == 6 ]]; then 
 tput rc
 thetitle
-printf "\n\r\e  $option1                                   "
-printf "\n\r\e  $option2                                   "
-printf "\n\r\e  $option3                                   "
-printf "\n\r\e  $option4                                   "
-printf "\n\r\e  $option5                                   "
+printf "\n\r  $option1                                   "
+printf "\n\r  $option2                                   "
+printf "\n\r  $option3                                   "
+printf "\n\r  $option4                                   "
+printf "\n\r  $option5                                   "
 printf "\n\r\e[1;96m> $option6                             \e[0m"
 
 tput sc
@@ -648,12 +648,12 @@ if [[ $selected == 1 ]]; then
 tput rc
 thetitle
 printf "\n\r\e[1;96m> $option1                             \e[0m"
-printf "\n\r\e  $option2                                   "
-printf "\n\r\e  $option3                                   "
-printf "\n\r\e  $option4                                   "
-printf "\n\r\e  $option5                                   "
-printf "\n\r\e  $option6                                   "
-printf "\n\r\e  $option7                                   "
+printf "\n\r  $option2                                   "
+printf "\n\r  $option3                                   "
+printf "\n\r  $option4                                   "
+printf "\n\r  $option5                                   "
+printf "\n\r  $option6                                   "
+printf "\n\r  $option7                                   "
 
 tput sc
 for i in {1..7}
@@ -665,13 +665,13 @@ done
 elif [[ $selected == 2 ]]; then 
 tput rc
 thetitle
-printf "\n\r\e  $option1                                   "
+printf "\n\r  $option1                                   "
 printf "\n\r\e[1;96m> $option2                             \e[0m"
-printf "\n\r\e  $option3                                   "
-printf "\n\r\e  $option4                                   "
-printf "\n\r\e  $option5                                   "
-printf "\n\r\e  $option6                                   "
-printf "\n\r\e  $option7                                   "
+printf "\n\r  $option3                                   "
+printf "\n\r  $option4                                   "
+printf "\n\r  $option5                                   "
+printf "\n\r  $option6                                   "
+printf "\n\r  $option7                                   "
 
 tput sc
 for i in {1..7}
@@ -683,13 +683,13 @@ done
 elif [[ $selected == 3 ]]; then 
 tput rc
 thetitle
-printf "\n\r\e  $option1                                   "
-printf "\n\r\e  $option2                                   "
+printf "\n\r  $option1                                   "
+printf "\n\r  $option2                                   "
 printf "\n\r\e[1;96m> $option3                             \e[0m"
-printf "\n\r\e  $option4                                   "
-printf "\n\r\e  $option5                                   "
-printf "\n\r\e  $option6                                   "
-printf "\n\r\e  $option7                                   "
+printf "\n\r  $option4                                   "
+printf "\n\r  $option5                                   "
+printf "\n\r  $option6                                   "
+printf "\n\r  $option7                                   "
 
 tput sc
 for i in {1..7}
@@ -701,13 +701,13 @@ done
 elif [[ $selected == 4 ]]; then 
 tput rc
 thetitle
-printf "\n\r\e  $option1                                   "
-printf "\n\r\e  $option2                                   "
-printf "\n\r\e  $option3                                   "
+printf "\n\r  $option1                                   "
+printf "\n\r  $option2                                   "
+printf "\n\r  $option3                                   "
 printf "\n\r\e[1;96m> $option4                             \e[0m"
-printf "\n\r\e  $option5                                   "
-printf "\n\r\e  $option6                                   "
-printf "\n\r\e  $option7                                   "
+printf "\n\r  $option5                                   "
+printf "\n\r  $option6                                   "
+printf "\n\r  $option7                                   "
 
 tput sc
 for i in {1..7}
@@ -719,13 +719,13 @@ done
 elif [[ $selected == 5 ]]; then 
 tput rc
 thetitle
-printf "\n\r\e  $option1                                   "
-printf "\n\r\e  $option2                                   "
-printf "\n\r\e  $option3                                   "
-printf "\n\r\e  $option4                                   "
+printf "\n\r  $option1                                   "
+printf "\n\r  $option2                                   "
+printf "\n\r  $option3                                   "
+printf "\n\r  $option4                                   "
 printf "\n\r\e[1;96m> $option5                             \e[0m"
-printf "\n\r\e  $option6                                   "
-printf "\n\r\e  $option7                                   "
+printf "\n\r  $option6                                   "
+printf "\n\r  $option7                                   "
 
 tput sc
 for i in {1..7}
@@ -737,13 +737,13 @@ done
 elif [[ $selected == 6 ]]; then 
 tput rc
 thetitle
-printf "\n\r\e  $option1                                   "
-printf "\n\r\e  $option2                                   "
-printf "\n\r\e  $option3                                   "
-printf "\n\r\e  $option4                                   "
-printf "\n\r\e  $option5                                   "
+printf "\n\r  $option1                                   "
+printf "\n\r  $option2                                   "
+printf "\n\r  $option3                                   "
+printf "\n\r  $option4                                   "
+printf "\n\r  $option5                                   "
 printf "\n\r\e[1;96m> $option6                             \e[0m"
-printf "\n\r\e  $option7                                   "
+printf "\n\r  $option7                                   "
 
 tput sc
 for i in {1..7}
@@ -755,12 +755,12 @@ done
 elif [[ $selected == 7 ]]; then 
 tput rc
 thetitle
-printf "\n\r\e  $option1                                   "
-printf "\n\r\e  $option2                                   "
-printf "\n\r\e  $option3                                   "
-printf "\n\r\e  $option4                                   "
-printf "\n\r\e  $option5                                   "
-printf "\n\r\e  $option6                                   "
+printf "\n\r  $option1                                   "
+printf "\n\r  $option2                                   "
+printf "\n\r  $option3                                   "
+printf "\n\r  $option4                                   "
+printf "\n\r  $option5                                   "
+printf "\n\r  $option6                                   "
 printf "\n\r\e[1;96m> $option7                             \e[0m"
 
 tput sc
@@ -799,13 +799,13 @@ if [[ $selected == 1 ]]; then
 tput rc
 thetitle
 printf "\n\r\e[1;96m> $option1                             \e[0m"
-printf "\n\r\e  $option2                                   "
-printf "\n\r\e  $option3                                   "
-printf "\n\r\e  $option4                                   "
-printf "\n\r\e  $option5                                   "
-printf "\n\r\e  $option6                                   "
-printf "\n\r\e  $option7                                   "
-printf "\n\r\e  $option8                                   "
+printf "\n\r  $option2                                   "
+printf "\n\r  $option3                                   "
+printf "\n\r  $option4                                   "
+printf "\n\r  $option5                                   "
+printf "\n\r  $option6                                   "
+printf "\n\r  $option7                                   "
+printf "\n\r  $option8                                   "
 
 tput sc
 for i in {1..8}
@@ -817,14 +817,14 @@ done
 elif [[ $selected == 2 ]]; then 
 tput rc
 thetitle
-printf "\n\r\e  $option1                                   "
+printf "\n\r  $option1                                   "
 printf "\n\r\e[1;96m> $option2                             \e[0m"
-printf "\n\r\e  $option3                                   "
-printf "\n\r\e  $option4                                   "
-printf "\n\r\e  $option5                                   "
-printf "\n\r\e  $option6                                   "
-printf "\n\r\e  $option7                                   "
-printf "\n\r\e  $option8                                   "
+printf "\n\r  $option3                                   "
+printf "\n\r  $option4                                   "
+printf "\n\r  $option5                                   "
+printf "\n\r  $option6                                   "
+printf "\n\r  $option7                                   "
+printf "\n\r  $option8                                   "
 
 tput sc
 for i in {1..8}
@@ -836,14 +836,14 @@ done
 elif [[ $selected == 3 ]]; then 
 tput rc
 thetitle
-printf "\n\r\e  $option1                                   "
-printf "\n\r\e  $option2                                   "
+printf "\n\r  $option1                                   "
+printf "\n\r  $option2                                   "
 printf "\n\r\e[1;96m> $option3                             \e[0m"
-printf "\n\r\e  $option4                                   "
-printf "\n\r\e  $option5                                   "
-printf "\n\r\e  $option6                                   "
-printf "\n\r\e  $option7                                   "
-printf "\n\r\e  $option8                                   "
+printf "\n\r  $option4                                   "
+printf "\n\r  $option5                                   "
+printf "\n\r  $option6                                   "
+printf "\n\r  $option7                                   "
+printf "\n\r  $option8                                   "
 
 tput sc
 for i in {1..8}
@@ -855,14 +855,14 @@ done
 elif [[ $selected == 4 ]]; then 
 tput rc
 thetitle
-printf "\n\r\e  $option1                                   "
-printf "\n\r\e  $option2                                   "
-printf "\n\r\e  $option3                                   "
+printf "\n\r  $option1                                   "
+printf "\n\r  $option2                                   "
+printf "\n\r  $option3                                   "
 printf "\n\r\e[1;96m> $option4                             \e[0m"
-printf "\n\r\e  $option5                                   "
-printf "\n\r\e  $option6                                   "
-printf "\n\r\e  $option7                                   "
-printf "\n\r\e  $option8                                   "
+printf "\n\r  $option5                                   "
+printf "\n\r  $option6                                   "
+printf "\n\r  $option7                                   "
+printf "\n\r  $option8                                   "
 
 tput sc
 for i in {1..8}
@@ -874,14 +874,14 @@ done
 elif [[ $selected == 5 ]]; then 
 tput rc
 thetitle
-printf "\n\r\e  $option1                                   "
-printf "\n\r\e  $option2                                   "
-printf "\n\r\e  $option3                                   "
-printf "\n\r\e  $option4                                   "
+printf "\n\r  $option1                                   "
+printf "\n\r  $option2                                   "
+printf "\n\r  $option3                                   "
+printf "\n\r  $option4                                   "
 printf "\n\r\e[1;96m> $option5                             \e[0m"
-printf "\n\r\e  $option6                                   "
-printf "\n\r\e  $option7                                   "
-printf "\n\r\e  $option8                                   "
+printf "\n\r  $option6                                   "
+printf "\n\r  $option7                                   "
+printf "\n\r  $option8                                   "
 
 tput sc
 for i in {1..8}
@@ -893,14 +893,14 @@ done
 elif [[ $selected == 6 ]]; then 
 tput rc
 thetitle
-printf "\n\r\e  $option1                                   "
-printf "\n\r\e  $option2                                   "
-printf "\n\r\e  $option3                                   "
-printf "\n\r\e  $option4                                   "
-printf "\n\r\e  $option5                                   "
+printf "\n\r  $option1                                   "
+printf "\n\r  $option2                                   "
+printf "\n\r  $option3                                   "
+printf "\n\r  $option4                                   "
+printf "\n\r  $option5                                   "
 printf "\n\r\e[1;96m> $option6                             \e[0m"
-printf "\n\r\e  $option7                                   "
-printf "\n\r\e  $option8                                   "
+printf "\n\r  $option7                                   "
+printf "\n\r  $option8                                   "
 
 tput sc
 for i in {1..8}
@@ -912,14 +912,14 @@ done
 elif [[ $selected == 7 ]]; then 
 tput rc
 thetitle
-printf "\n\r\e  $option1                                   "
-printf "\n\r\e  $option2                                   "
-printf "\n\r\e  $option3                                   "
-printf "\n\r\e  $option4                                   "
-printf "\n\r\e  $option5                                   "
-printf "\n\r\e  $option6                                   "
+printf "\n\r  $option1                                   "
+printf "\n\r  $option2                                   "
+printf "\n\r  $option3                                   "
+printf "\n\r  $option4                                   "
+printf "\n\r  $option5                                   "
+printf "\n\r  $option6                                   "
 printf "\n\r\e[1;96m> $option7                             \e[0m"
-printf "\n\r\e  $option8                                   "
+printf "\n\r  $option8                                   "
 
 tput sc
 for i in {1..8}
@@ -931,13 +931,13 @@ done
 elif [[ $selected == 8 ]]; then 
 tput rc
 thetitle
-printf "\n\r\e  $option1                                   "
-printf "\n\r\e  $option2                                   "
-printf "\n\r\e  $option3                                   "
-printf "\n\r\e  $option4                                   "
-printf "\n\r\e  $option5                                   "
-printf "\n\r\e  $option6                                   "
-printf "\n\r\e  $option7                                   "
+printf "\n\r  $option1                                   "
+printf "\n\r  $option2                                   "
+printf "\n\r  $option3                                   "
+printf "\n\r  $option4                                   "
+printf "\n\r  $option5                                   "
+printf "\n\r  $option6                                   "
+printf "\n\r  $option7                                   "
 printf "\n\r\e[1;96m> $option8                             \e[0m"
 
 tput sc
@@ -976,14 +976,14 @@ if [[ $selected == 1 ]]; then
 tput rc
 thetitle
 printf "\n\r\e[1;96m> $option1                             \e[0m"
-printf "\n\r\e  $option2                                   "
-printf "\n\r\e  $option3                                   "
-printf "\n\r\e  $option4                                   "
-printf "\n\r\e  $option5                                   "
-printf "\n\r\e  $option6                                   "
-printf "\n\r\e  $option7                                   "
-printf "\n\r\e  $option8                                   "
-printf "\n\r\e  $option9                                   "
+printf "\n\r  $option2                                   "
+printf "\n\r  $option3                                   "
+printf "\n\r  $option4                                   "
+printf "\n\r  $option5                                   "
+printf "\n\r  $option6                                   "
+printf "\n\r  $option7                                   "
+printf "\n\r  $option8                                   "
+printf "\n\r  $option9                                   "
 
 tput sc
 for i in {1..9}
@@ -995,15 +995,15 @@ done
 elif [[ $selected == 2 ]]; then 
 tput rc
 thetitle
-printf "\n\r\e  $option1                                   "
+printf "\n\r  $option1                                   "
 printf "\n\r\e[1;96m> $option2                             \e[0m"
-printf "\n\r\e  $option3                                   "
-printf "\n\r\e  $option4                                   "
-printf "\n\r\e  $option5                                   "
-printf "\n\r\e  $option6                                   "
-printf "\n\r\e  $option7                                   "
-printf "\n\r\e  $option8                                   "
-printf "\n\r\e  $option9                                   "
+printf "\n\r  $option3                                   "
+printf "\n\r  $option4                                   "
+printf "\n\r  $option5                                   "
+printf "\n\r  $option6                                   "
+printf "\n\r  $option7                                   "
+printf "\n\r  $option8                                   "
+printf "\n\r  $option9                                   "
 
 tput sc
 for i in {1..9}
@@ -1015,15 +1015,15 @@ done
 elif [[ $selected == 3 ]]; then 
 tput rc
 thetitle
-printf "\n\r\e  $option1                                   "
-printf "\n\r\e  $option2                                   "
+printf "\n\r  $option1                                   "
+printf "\n\r  $option2                                   "
 printf "\n\r\e[1;96m> $option3                             \e[0m"
-printf "\n\r\e  $option4                                   "
-printf "\n\r\e  $option5                                   "
-printf "\n\r\e  $option6                                   "
-printf "\n\r\e  $option7                                   "
-printf "\n\r\e  $option8                                   "
-printf "\n\r\e  $option9                                   "
+printf "\n\r  $option4                                   "
+printf "\n\r  $option5                                   "
+printf "\n\r  $option6                                   "
+printf "\n\r  $option7                                   "
+printf "\n\r  $option8                                   "
+printf "\n\r  $option9                                   "
 
 tput sc
 for i in {1..9}
@@ -1035,15 +1035,15 @@ done
 elif [[ $selected == 4 ]]; then 
 tput rc
 thetitle
-printf "\n\r\e  $option1                                   "
-printf "\n\r\e  $option2                                   "
-printf "\n\r\e  $option3                                   "
+printf "\n\r  $option1                                   "
+printf "\n\r  $option2                                   "
+printf "\n\r  $option3                                   "
 printf "\n\r\e[1;96m> $option4                             \e[0m"
-printf "\n\r\e  $option5                                   "
-printf "\n\r\e  $option6                                   "
-printf "\n\r\e  $option7                                   "
-printf "\n\r\e  $option8                                   "
-printf "\n\r\e  $option9                                   "
+printf "\n\r  $option5                                   "
+printf "\n\r  $option6                                   "
+printf "\n\r  $option7                                   "
+printf "\n\r  $option8                                   "
+printf "\n\r  $option9                                   "
 
 tput sc
 for i in {1..9}
@@ -1055,15 +1055,15 @@ done
 elif [[ $selected == 5 ]]; then 
 tput rc
 thetitle
-printf "\n\r\e  $option1                                   "
-printf "\n\r\e  $option2                                   "
-printf "\n\r\e  $option3                                   "
-printf "\n\r\e  $option4                                   "
+printf "\n\r  $option1                                   "
+printf "\n\r  $option2                                   "
+printf "\n\r  $option3                                   "
+printf "\n\r  $option4                                   "
 printf "\n\r\e[1;96m> $option5                             \e[0m"
-printf "\n\r\e  $option6                                   "
-printf "\n\r\e  $option7                                   "
-printf "\n\r\e  $option8                                   "
-printf "\n\r\e  $option9                                   "
+printf "\n\r  $option6                                   "
+printf "\n\r  $option7                                   "
+printf "\n\r  $option8                                   "
+printf "\n\r  $option9                                   "
 
 tput sc
 for i in {1..9}
@@ -1075,15 +1075,15 @@ done
 elif [[ $selected == 6 ]]; then 
 tput rc
 thetitle
-printf "\n\r\e  $option1                                   "
-printf "\n\r\e  $option2                                   "
-printf "\n\r\e  $option3                                   "
-printf "\n\r\e  $option4                                   "
-printf "\n\r\e  $option5                                   "
+printf "\n\r  $option1                                   "
+printf "\n\r  $option2                                   "
+printf "\n\r  $option3                                   "
+printf "\n\r  $option4                                   "
+printf "\n\r  $option5                                   "
 printf "\n\r\e[1;96m> $option6                             \e[0m"
-printf "\n\r\e  $option7                                   "
-printf "\n\r\e  $option8                                   "
-printf "\n\r\e  $option9                                   "
+printf "\n\r  $option7                                   "
+printf "\n\r  $option8                                   "
+printf "\n\r  $option9                                   "
 
 tput sc
 for i in {1..9}
@@ -1095,15 +1095,15 @@ done
 elif [[ $selected == 7 ]]; then 
 tput rc
 thetitle
-printf "\n\r\e  $option1                                   "
-printf "\n\r\e  $option2                                   "
-printf "\n\r\e  $option3                                   "
-printf "\n\r\e  $option4                                   "
-printf "\n\r\e  $option5                                   "
-printf "\n\r\e  $option6                                   "
+printf "\n\r  $option1                                   "
+printf "\n\r  $option2                                   "
+printf "\n\r  $option3                                   "
+printf "\n\r  $option4                                   "
+printf "\n\r  $option5                                   "
+printf "\n\r  $option6                                   "
 printf "\n\r\e[1;96m> $option7                             \e[0m"
-printf "\n\r\e  $option8                                   "
-printf "\n\r\e  $option9                                   "
+printf "\n\r  $option8                                   "
+printf "\n\r  $option9                                   "
 
 tput sc
 for i in {1..9}
@@ -1115,15 +1115,15 @@ done
 elif [[ $selected == 8 ]]; then 
 tput rc
 thetitle
-printf "\n\r\e  $option1                                   "
-printf "\n\r\e  $option2                                   "
-printf "\n\r\e  $option3                                   "
-printf "\n\r\e  $option4                                   "
-printf "\n\r\e  $option5                                   "
-printf "\n\r\e  $option6                                   "
-printf "\n\r\e  $option7                                   "
+printf "\n\r  $option1                                   "
+printf "\n\r  $option2                                   "
+printf "\n\r  $option3                                   "
+printf "\n\r  $option4                                   "
+printf "\n\r  $option5                                   "
+printf "\n\r  $option6                                   "
+printf "\n\r  $option7                                   "
 printf "\n\r\e[1;96m> $option8                             \e[0m"
-printf "\n\r\e  $option9                                   "
+printf "\n\r  $option9                                   "
 
 tput sc
 for i in {1..9}
@@ -1135,14 +1135,14 @@ done
 elif [[ $selected == 9 ]]; then 
 tput rc
 thetitle
-printf "\n\r\e  $option1                                   "
-printf "\n\r\e  $option2                                   "
-printf "\n\r\e  $option3                                   "
-printf "\n\r\e  $option4                                   "
-printf "\n\r\e  $option5                                   "
-printf "\n\r\e  $option6                                   "
-printf "\n\r\e  $option7                                   "
-printf "\n\r\e  $option8                                   "
+printf "\n\r  $option1                                   "
+printf "\n\r  $option2                                   "
+printf "\n\r  $option3                                   "
+printf "\n\r  $option4                                   "
+printf "\n\r  $option5                                   "
+printf "\n\r  $option6                                   "
+printf "\n\r  $option7                                   "
+printf "\n\r  $option8                                   "
 printf "\n\r\e[1;96m> $option9                             \e[0m"
 
 tput sc
@@ -1181,15 +1181,15 @@ if [[ $selected == 1 ]]; then
 tput rc
 thetitle
 printf "\n\r\e[1;96m> $option1                             \e[0m"
-printf "\n\r\e  $option2                                   "
-printf "\n\r\e  $option3                                   "
-printf "\n\r\e  $option4                                   "
-printf "\n\r\e  $option5                                   "
-printf "\n\r\e  $option6                                   "
-printf "\n\r\e  $option7                                   "
-printf "\n\r\e  $option8                                   "
-printf "\n\r\e  $option9                                   "
-printf "\n\r\e  $option10                                   "
+printf "\n\r  $option2                                   "
+printf "\n\r  $option3                                   "
+printf "\n\r  $option4                                   "
+printf "\n\r  $option5                                   "
+printf "\n\r  $option6                                   "
+printf "\n\r  $option7                                   "
+printf "\n\r  $option8                                   "
+printf "\n\r  $option9                                   "
+printf "\n\r  $option10                                   "
 
 tput sc
 for i in {1..10}
@@ -1201,16 +1201,16 @@ done
 elif [[ $selected == 2 ]]; then 
 tput rc
 thetitle
-printf "\n\r\e  $option1                                   "
+printf "\n\r  $option1                                   "
 printf "\n\r\e[1;96m> $option2                             \e[0m"
-printf "\n\r\e  $option3                                   "
-printf "\n\r\e  $option4                                   "
-printf "\n\r\e  $option5                                   "
-printf "\n\r\e  $option6                                   "
-printf "\n\r\e  $option7                                   "
-printf "\n\r\e  $option8                                   "
-printf "\n\r\e  $option9                                   "
-printf "\n\r\e  $option10                                   "
+printf "\n\r  $option3                                   "
+printf "\n\r  $option4                                   "
+printf "\n\r  $option5                                   "
+printf "\n\r  $option6                                   "
+printf "\n\r  $option7                                   "
+printf "\n\r  $option8                                   "
+printf "\n\r  $option9                                   "
+printf "\n\r  $option10                                   "
 
 tput sc
 for i in {1..10}
@@ -1222,16 +1222,16 @@ done
 elif [[ $selected == 3 ]]; then 
 tput rc
 thetitle
-printf "\n\r\e  $option1                                   "
-printf "\n\r\e  $option2                                   "
+printf "\n\r  $option1                                   "
+printf "\n\r  $option2                                   "
 printf "\n\r\e[1;96m> $option3                             \e[0m"
-printf "\n\r\e  $option4                                   "
-printf "\n\r\e  $option5                                   "
-printf "\n\r\e  $option6                                   "
-printf "\n\r\e  $option7                                   "
-printf "\n\r\e  $option8                                   "
-printf "\n\r\e  $option9                                   "
-printf "\n\r\e  $option10                                   "
+printf "\n\r  $option4                                   "
+printf "\n\r  $option5                                   "
+printf "\n\r  $option6                                   "
+printf "\n\r  $option7                                   "
+printf "\n\r  $option8                                   "
+printf "\n\r  $option9                                   "
+printf "\n\r  $option10                                   "
 
 tput sc
 for i in {1..10}
@@ -1243,16 +1243,16 @@ done
 elif [[ $selected == 4 ]]; then 
 tput rc
 thetitle
-printf "\n\r\e  $option1                                   "
-printf "\n\r\e  $option2                                   "
-printf "\n\r\e  $option3                                   "
+printf "\n\r  $option1                                   "
+printf "\n\r  $option2                                   "
+printf "\n\r  $option3                                   "
 printf "\n\r\e[1;96m> $option4                             \e[0m"
-printf "\n\r\e  $option5                                   "
-printf "\n\r\e  $option6                                   "
-printf "\n\r\e  $option7                                   "
-printf "\n\r\e  $option8                                   "
-printf "\n\r\e  $option9                                   "
-printf "\n\r\e  $option10                                   "
+printf "\n\r  $option5                                   "
+printf "\n\r  $option6                                   "
+printf "\n\r  $option7                                   "
+printf "\n\r  $option8                                   "
+printf "\n\r  $option9                                   "
+printf "\n\r  $option10                                   "
 
 tput sc
 for i in {1..10}
@@ -1264,16 +1264,16 @@ done
 elif [[ $selected == 5 ]]; then 
 tput rc
 thetitle
-printf "\n\r\e  $option1                                   "
-printf "\n\r\e  $option2                                   "
-printf "\n\r\e  $option3                                   "
-printf "\n\r\e  $option4                                   "
+printf "\n\r  $option1                                   "
+printf "\n\r  $option2                                   "
+printf "\n\r  $option3                                   "
+printf "\n\r  $option4                                   "
 printf "\n\r\e[1;96m> $option5                             \e[0m"
-printf "\n\r\e  $option6                                   "
-printf "\n\r\e  $option7                                   "
-printf "\n\r\e  $option8                                   "
-printf "\n\r\e  $option9                                   "
-printf "\n\r\e  $option10                                   "
+printf "\n\r  $option6                                   "
+printf "\n\r  $option7                                   "
+printf "\n\r  $option8                                   "
+printf "\n\r  $option9                                   "
+printf "\n\r  $option10                                   "
 
 tput sc
 for i in {1..10}
@@ -1285,16 +1285,16 @@ done
 elif [[ $selected == 6 ]]; then 
 tput rc
 thetitle
-printf "\n\r\e  $option1                                   "
-printf "\n\r\e  $option2                                   "
-printf "\n\r\e  $option3                                   "
-printf "\n\r\e  $option4                                   "
-printf "\n\r\e  $option5                                   "
+printf "\n\r  $option1                                   "
+printf "\n\r  $option2                                   "
+printf "\n\r  $option3                                   "
+printf "\n\r  $option4                                   "
+printf "\n\r  $option5                                   "
 printf "\n\r\e[1;96m> $option6                             \e[0m"
-printf "\n\r\e  $option7                                   "
-printf "\n\r\e  $option8                                   "
-printf "\n\r\e  $option9                                   "
-printf "\n\r\e  $option10                                   "
+printf "\n\r  $option7                                   "
+printf "\n\r  $option8                                   "
+printf "\n\r  $option9                                   "
+printf "\n\r  $option10                                   "
 
 tput sc
 for i in {1..10}
@@ -1306,16 +1306,16 @@ done
 elif [[ $selected == 7 ]]; then 
 tput rc
 thetitle
-printf "\n\r\e  $option1                                   "
-printf "\n\r\e  $option2                                   "
-printf "\n\r\e  $option3                                   "
-printf "\n\r\e  $option4                                   "
-printf "\n\r\e  $option5                                   "
-printf "\n\r\e  $option6                                   "
+printf "\n\r  $option1                                   "
+printf "\n\r  $option2                                   "
+printf "\n\r  $option3                                   "
+printf "\n\r  $option4                                   "
+printf "\n\r  $option5                                   "
+printf "\n\r  $option6                                   "
 printf "\n\r\e[1;96m> $option7                             \e[0m"
-printf "\n\r\e  $option8                                   "
-printf "\n\r\e  $option9                                   "
-printf "\n\r\e  $option10                                   "
+printf "\n\r  $option8                                   "
+printf "\n\r  $option9                                   "
+printf "\n\r  $option10                                   "
 
 tput sc
 for i in {1..10}
@@ -1327,16 +1327,16 @@ done
 elif [[ $selected == 8 ]]; then 
 tput rc
 thetitle
-printf "\n\r\e  $option1                                   "
-printf "\n\r\e  $option2                                   "
-printf "\n\r\e  $option3                                   "
-printf "\n\r\e  $option4                                   "
-printf "\n\r\e  $option5                                   "
-printf "\n\r\e  $option6                                   "
-printf "\n\r\e  $option7                                   "
+printf "\n\r  $option1                                   "
+printf "\n\r  $option2                                   "
+printf "\n\r  $option3                                   "
+printf "\n\r  $option4                                   "
+printf "\n\r  $option5                                   "
+printf "\n\r  $option6                                   "
+printf "\n\r  $option7                                   "
 printf "\n\r\e[1;96m> $option8                             \e[0m"
-printf "\n\r\e  $option9                                   "
-printf "\n\r\e  $option10                                   "
+printf "\n\r  $option9                                   "
+printf "\n\r  $option10                                   "
 
 tput sc
 for i in {1..10}
@@ -1348,16 +1348,16 @@ done
 elif [[ $selected == 9 ]]; then 
 tput rc
 thetitle
-printf "\n\r\e  $option1                                   "
-printf "\n\r\e  $option2                                   "
-printf "\n\r\e  $option3                                   "
-printf "\n\r\e  $option4                                   "
-printf "\n\r\e  $option5                                   "
-printf "\n\r\e  $option6                                   "
-printf "\n\r\e  $option7                                   "
-printf "\n\r\e  $option8                                   "
+printf "\n\r  $option1                                   "
+printf "\n\r  $option2                                   "
+printf "\n\r  $option3                                   "
+printf "\n\r  $option4                                   "
+printf "\n\r  $option5                                   "
+printf "\n\r  $option6                                   "
+printf "\n\r  $option7                                   "
+printf "\n\r  $option8                                   "
 printf "\n\r\e[1;96m> $option9                             \e[0m"
-printf "\n\r\e  $option10                                   "
+printf "\n\r  $option10                                   "
 
 tput sc
 for i in {1..10}
@@ -1369,15 +1369,15 @@ done
 elif [[ $selected == 10 ]]; then 
 tput rc
 thetitle
-printf "\n\r\e  $option1                                   "
-printf "\n\r\e  $option2                                   "
-printf "\n\r\e  $option3                                   "
-printf "\n\r\e  $option4                                   "
-printf "\n\r\e  $option5                                   "
-printf "\n\r\e  $option6                                   "
-printf "\n\r\e  $option7                                   "
-printf "\n\r\e  $option8                                   "
-printf "\n\r\e  $option9                                   "
+printf "\n\r  $option1                                   "
+printf "\n\r  $option2                                   "
+printf "\n\r  $option3                                   "
+printf "\n\r  $option4                                   "
+printf "\n\r  $option5                                   "
+printf "\n\r  $option6                                   "
+printf "\n\r  $option7                                   "
+printf "\n\r  $option8                                   "
+printf "\n\r  $option9                                   "
 printf "\n\r\e[1;96m> $option10                             \e[0m"
 
 tput sc
