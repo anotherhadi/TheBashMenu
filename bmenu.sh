@@ -34,6 +34,7 @@ trap ctrl_c INT
 function ctrl_c() {
   tput cnorm
   tput rc
+  tput ed
   printf "\r\e[0;91mx \e[0m\e[1;77mGood Bye!                                                               \e[0m"
   echo
   exit
