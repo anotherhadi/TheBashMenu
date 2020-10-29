@@ -16,6 +16,7 @@ bash install.sh
 ```
 
 ### Create Your Own Menu :
+<p>La commande n'est pas ajouter pour l'instant au path. Donc remplacez "bmenu" par "./~/.bmenu"</p>
 <p> Create a new bash file (.sh), then paste:</p>
 
 ```bash
@@ -60,7 +61,7 @@ bash install.sh
 <p> This input created the menu above : </p>
 
 ```bash
-./~/.bmenu -t "My First Menu" -s "[Use arrows to move]" -o "Exit,hadrienaka.fr,Twitter" -l MyFirstMenu.sh
+bmenu -t "My First Menu" -s "[Use arrows to move]" -o "Exit,hadrienaka.fr,Twitter" -l MyFirstMenu.sh
 ```
 
 ![Twitter Follow](https://img.shields.io/twitter/follow/hadrienaka?label=%40HadrienAka&logo=twitter&logoColor=ffffff&style=for-the-badge)
