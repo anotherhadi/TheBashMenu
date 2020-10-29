@@ -1,6 +1,6 @@
 #! /bin/bash
 rm README.md
-rm exemples.gif
+rm menuexemple.gif
 rm menu.gif
 
 mv bmenu.sh ~/.bmenu

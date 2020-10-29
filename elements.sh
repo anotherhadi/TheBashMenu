@@ -75,4 +75,4 @@
   fi
   }
 
-  source bmenu -t "Menu Title" -s "[SubTitle]" -o "Option 1,Option 2,Option 3"
+  source ~/.bmenu -t "Menu Title" -s "[SubTitle]" -o "Option 1,Option 2,Option 3"
