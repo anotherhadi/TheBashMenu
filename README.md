@@ -56,9 +56,15 @@ bash install.sh
 -s, --subtitle           Edit the subtitle
 -o, --option             Edit all the options (Put a comma between them)
 -l, --link               Link another command file
+-a, --alternative        Display an alternative menu (Put -a at the end of the command)
 
 ! If you link the menu with the command of another bash file, put "export -f" on your commandnamefile.sh and the arguments "-l commandnamefile.sh" to the bmenu command.
 ```
+
+### Alternative Menu
+
+<p> The alternative menu may be a better choice when you have more than 7 options </p>
+<p> To display an alternative menu, just add "-a" or "--alternative" at the end of your command. </p>
 <p> Here is an exemple with the -l arguments : </p>
 
 ```bash
