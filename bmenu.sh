@@ -8,7 +8,7 @@
 ###              
 ###########################################################
 ###              
-### Look, I spent more than 48 hours on this code.
+### Look, I spent more than 72 hours on this code.
 ### I have no idea how it works, but it does works.
 ### If ANYTHING happens to it, YOU will be the one
 ### who will spend the next many hours trying to fix it.
@@ -39,6 +39,10 @@ function ctrl_c() {
   exit
 }
 
+############################################# FONCTION -d
+
+d=0
+
 ############################################# ARGUMENTS
 
 while test $# -gt 0; do
@@ -55,6 +59,7 @@ while test $# -gt 0; do
   printf "\n\e[1;92m-s, --subtitle        \e[0m\e[1;77mEdit the subtitle\e[0m"
   printf "\n\e[1;92m-o, --option          \e[0m\e[1;77mEdit all the options (Put a comma between them)\e[0m"
   printf "\n\e[1;92m-l, --link            \e[0m\e[1;77mLink another command file\e[0m"
+  printf "\n\e[1;92m-a, --alternative     \e[0m\e[1;77mDisplay an alternative menu (Put -a at the end of the command)\e[0m"
   printf "\n"
   printf "\n\e[0;92m? \e[0m\e[1;77mMore information :  \e[0;96mhttps://github.com/hadrienaka/TheBashMenu \e[0m"
   echo
@@ -105,7 +110,11 @@ while test $# -gt 0; do
       shift
       ;;
 
-
+    -a|--alternative)
+      shift
+        d=1
+      shift
+      ;;
     *)
       break
       ;;
@@ -3188,8 +3197,8 @@ fi
 done
 }
 
-
-
+defaultmenu ()
+{
     if [[ $i == 1 ]]; then
     while true
     do
@@ -3295,4 +3304,70 @@ done
     ifoption15
     done
 
+    fi
+}
+
+othermenu ()
+{
+  thetitle
+  printf "\n"
+  if [[ $i -gt 1 ]] || [[ $i = 1 ]]; then
+  printf "\n\e[0;92m-1 \e[0m\e[0;77m$option1\e[0m"
+  fi
+  if [[ $i -gt 2 ]] || [[ $i = 2 ]]; then
+  printf "\n\e[0;92m-2 \e[0m\e[0;77m$option2\e[0m"
+  fi
+  if [[ $i -gt 3 ]] || [[ $i = 3 ]]; then
+  printf "\n\e[0;92m-3 \e[0m\e[0;77m$option3\e[0m"
+  fi
+  if [[ $i -gt 4 ]] || [[ $i = 4 ]]; then
+  printf "\n\e[0;92m-4 \e[0m\e[0;77m$option4\e[0m"
+  fi
+  if [[ $i -gt 5 ]] || [[ $i = 5 ]]; then
+  printf "\n\e[0;92m-5 \e[0m\e[0;77m$option5\e[0m"
+  fi
+  if [[ $i -gt 6 ]] || [[ $i = 6 ]]; then
+  printf "\n\e[0;92m-6 \e[0m\e[0;77m$option6\e[0m"
+  fi
+  if [[ $i -gt 7 ]] || [[ $i = 7 ]]; then
+  printf "\n\e[0;92m-7 \e[0m\e[0;77m$option7\e[0m"
+  fi
+  if [[ $i -gt 8 ]] || [[ $i = 8 ]]; then
+  printf "\n\e[0;92m-8 \e[0m\e[0;77m$option8\e[0m"
+  fi
+  if [[ $i -gt 9 ]] || [[ $i = 9 ]]; then
+  printf "\n\e[0;92m-9 \e[0m\e[0;77m$option9\e[0m"
+  fi
+  if [[ "$i" -gt "10" ]] || [ "$i" == "10" ]; then
+  printf "\n\e[0;92m-10 \e[0m\e[0;77m$option10\e[0m"
+  fi
+  if [[ "$i" -gt "11" ]] || [ "$i" == "11" ]; then
+  printf "\n\e[0;92m-11 \e[0m\e[0;77m$option11\e[0m"
+  fi
+  if [[ "$i" -gt "12" ]] || [ "$i" == "12" ]; then
+  printf "\n\e[0;92m-12 \e[0m\e[0;77m$option12\e[0m"
+  fi
+  if [[ "$i" -gt "13" ]] || [ "$i" == "13" ]; then
+  printf "\n\e[0;92m-13 \e[0m\e[0;77m$option13\e[0m"
+  fi
+  if [[ "$i" -gt "14" ]] || [ "$i" == "14" ]; then
+  printf "\n\e[0;92m-14 \e[0m\e[0;77m$option14\e[0m"
+  fi
+  if [[ "$i" -gt "15" ]] || [ "$i" == "15" ]; then
+  printf "\n\e[0;92m-15 \e[0m\e[0;77m$option15\e[0m"
+  fi
+echo
+
+ printf "\n\e[0;92m? \e[0m\e[1;77mOption :\e[0;96m\e[0m"
+  read -n2 selected
+  tput cnorm
+  enter
+
+}
+
+    if [[ $d == 0 ]]; then
+    defaultmenu
+
+    elif [[ $d == 1 ]]; then
+    othermenu
     fi
