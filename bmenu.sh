@@ -1,9 +1,24 @@
 #! /bin/bash
-###############################
-####### Created By @HadrienAka
-###############################
+##############################################################################################
+##############################################################################################
+####### Created By @HadrienAka ####### Created By @HadrienAka ####### Created By @HadrienAka #
+##############################################################################################
+##############################################################################################
+###
+###              
+###########################################################
+###              
+### Look, I spent more than 48 hours on this code.
+### I have no idea how it works, but it does works.
+### If ANYTHING happens to it, YOU will be the one
+### who will spend the next many hours trying to fix it.
+###              
+###########################################################
+###              
+###              
 
 ############################################ EXIT IF NO ARGUMENTS
+
 empty () {
 printf "\n\e[0;91mx \e[0m\e[1;77mAdd arguments. \e[0;96m [type \"bmenu --help\" to get help]\e[0m"
 printf "\n"
@@ -13,6 +28,7 @@ exit 0
 [ -z "$1" ] && empty
 
 ############################################# TRAP CTRL C
+
 trap ctrl_c INT
 
 function ctrl_c() {
@@ -24,6 +40,7 @@ function ctrl_c() {
 }
 
 ############################################# ARGUMENTS
+
 while test $# -gt 0; do
   case "$1" in
 
@@ -95,7 +112,8 @@ while test $# -gt 0; do
   esac
 done
 
-####################################################### GIVE OPTIONS VAR TO $COMMAND
+
+################################################## CHECK IF -l & LINKFILE EXIST
 
 if [ -z "$linkfile" ]
 then
@@ -106,10 +124,17 @@ else
 
 fi
 
+################################################## SAVE CURSOR POSITION AND DELETE IT
+
 tput sc
 tput civis
+
+################################################## REPLACE COMMA TO SPACE
+
 option=$( echo $option | tr \   / )
 option=$( echo $option | tr ,  \  )
+
+####################################################### GIVE OPTIONS VAR TO $COMMAND
 
 i=1;
 for command in $option
@@ -153,13 +178,41 @@ do
     elif [[ $i == 10 ]]; then
     option10=$command
     option10=$( echo $option10 | tr /  \  )
+
+    elif [[ $i == 11 ]]; then
+    option11=$command
+    option11=$( echo $option11 | tr /  \  )
+
+    elif [[ $i == 12 ]]; then
+    option12=$command
+    option12=$( echo $option12 | tr /  \  )
+
+    elif [[ $i == 13 ]]; then
+    option13=$command
+    option13=$( echo $option13 | tr /  \  )
+
+    elif [[ $i == 14 ]]; then
+    option14=$command
+    option14=$( echo $option14 | tr /  \  )
+
+    elif [[ $i == 15 ]]; then
+    option15=$command
+    option15=$( echo $option15 | tr /  \  )
+
     fi
+
     i=$((i + 1));
 
 done
 
+################# INIT SELECTED & VAR
+
 selected=1
 i=$((i - 1));
+
+####################################################################
+########################## BEFORE ENTER ############################
+####################################################################
 
 enterbis () {
 testenter=0
@@ -174,11 +227,26 @@ tput sc
 tput cnorm
 }
 
-############################## TITLE
+####################################################################
+############################## TITLE ###############################
+####################################################################
 
 thetitle () {
   printf "\r\e[0;92m✓ \e[0m\e[1;77m$title\e[0;96m  $subtitle\e[0m"
 }
+
+
+
+
+
+####################################################################
+####################################################################
+##############               OPTION PART               #############
+##############    Don't read it, it's boring ..        #############
+####################################################################
+####################################################################
+
+
 
 ############################## 1 OPTION
 ifoption1 () {
@@ -1411,6 +1479,1717 @@ done
 
 
 
+############################### 11 OPTIONS
+display11 () {
+if [[ $selected == 1 ]]; then 
+tput rc
+thetitle
+printf "\n\r\e[1;96m> $option1                             \e[0m"
+printf "\n\r  $option2                                   "
+printf "\n\r  $option3                                   "
+printf "\n\r  $option4                                   "
+printf "\n\r  $option5                                   "
+printf "\n\r  $option6                                   "
+printf "\n\r  $option7                                   "
+printf "\n\r  $option8                                   "
+printf "\n\r  $option9                                   "
+printf "\n\r  $option10                                   "
+printf "\n\r  $option11                                   "
+
+tput sc
+for i in {1..11}
+do 
+tput cuu1
+tput sc
+done
+
+elif [[ $selected == 2 ]]; then 
+tput rc
+thetitle
+printf "\n\r  $option1                                   "
+printf "\n\r\e[1;96m> $option2                             \e[0m"
+printf "\n\r  $option3                                   "
+printf "\n\r  $option4                                   "
+printf "\n\r  $option5                                   "
+printf "\n\r  $option6                                   "
+printf "\n\r  $option7                                   "
+printf "\n\r  $option8                                   "
+printf "\n\r  $option9                                   "
+printf "\n\r  $option10                                   "
+printf "\n\r  $option11                                   "
+
+tput sc
+for i in {1..11}
+do 
+tput cuu1
+tput sc
+done
+
+elif [[ $selected == 3 ]]; then 
+tput rc
+thetitle
+printf "\n\r  $option1                                   "
+printf "\n\r  $option2                                   "
+printf "\n\r\e[1;96m> $option3                             \e[0m"
+printf "\n\r  $option4                                   "
+printf "\n\r  $option5                                   "
+printf "\n\r  $option6                                   "
+printf "\n\r  $option7                                   "
+printf "\n\r  $option8                                   "
+printf "\n\r  $option9                                   "
+printf "\n\r  $option10                                   "
+printf "\n\r  $option11                                   "
+
+tput sc
+for i in {1..11}
+do 
+tput cuu1
+tput sc
+done
+
+elif [[ $selected == 4 ]]; then 
+tput rc
+thetitle
+printf "\n\r  $option1                                   "
+printf "\n\r  $option2                                   "
+printf "\n\r  $option3                                   "
+printf "\n\r\e[1;96m> $option4                             \e[0m"
+printf "\n\r  $option5                                   "
+printf "\n\r  $option6                                   "
+printf "\n\r  $option7                                   "
+printf "\n\r  $option8                                   "
+printf "\n\r  $option9                                   "
+printf "\n\r  $option10                                   "
+printf "\n\r  $option11                                   "
+
+tput sc
+for i in {1..11}
+do 
+tput cuu1
+tput sc
+done
+
+elif [[ $selected == 5 ]]; then 
+tput rc
+thetitle
+printf "\n\r  $option1                                   "
+printf "\n\r  $option2                                   "
+printf "\n\r  $option3                                   "
+printf "\n\r  $option4                                   "
+printf "\n\r\e[1;96m> $option5                             \e[0m"
+printf "\n\r  $option6                                   "
+printf "\n\r  $option7                                   "
+printf "\n\r  $option8                                   "
+printf "\n\r  $option9                                   "
+printf "\n\r  $option10                                   "
+printf "\n\r  $option11                                   "
+
+tput sc
+for i in {1..11}
+do 
+tput cuu1
+tput sc
+done
+
+elif [[ $selected == 6 ]]; then 
+tput rc
+thetitle
+printf "\n\r  $option1                                   "
+printf "\n\r  $option2                                   "
+printf "\n\r  $option3                                   "
+printf "\n\r  $option4                                   "
+printf "\n\r  $option5                                   "
+printf "\n\r\e[1;96m> $option6                             \e[0m"
+printf "\n\r  $option7                                   "
+printf "\n\r  $option8                                   "
+printf "\n\r  $option9                                   "
+printf "\n\r  $option10                                   "
+printf "\n\r  $option11                                   "
+
+tput sc
+for i in {1..11}
+do 
+tput cuu1
+tput sc
+done
+
+elif [[ $selected == 7 ]]; then 
+tput rc
+thetitle
+printf "\n\r  $option1                                   "
+printf "\n\r  $option2                                   "
+printf "\n\r  $option3                                   "
+printf "\n\r  $option4                                   "
+printf "\n\r  $option5                                   "
+printf "\n\r  $option6                                   "
+printf "\n\r\e[1;96m> $option7                             \e[0m"
+printf "\n\r  $option8                                   "
+printf "\n\r  $option9                                   "
+printf "\n\r  $option10                                   "
+printf "\n\r  $option11                                   "
+
+tput sc
+for i in {1..11}
+do 
+tput cuu1
+tput sc
+done
+
+elif [[ $selected == 8 ]]; then 
+tput rc
+thetitle
+printf "\n\r  $option1                                   "
+printf "\n\r  $option2                                   "
+printf "\n\r  $option3                                   "
+printf "\n\r  $option4                                   "
+printf "\n\r  $option5                                   "
+printf "\n\r  $option6                                   "
+printf "\n\r  $option7                                   "
+printf "\n\r\e[1;96m> $option8                             \e[0m"
+printf "\n\r  $option9                                   "
+printf "\n\r  $option10                                   "
+printf "\n\r  $option11                                   "
+
+tput sc
+for i in {1..11}
+do 
+tput cuu1
+tput sc
+done
+
+elif [[ $selected == 9 ]]; then 
+tput rc
+thetitle
+printf "\n\r  $option1                                   "
+printf "\n\r  $option2                                   "
+printf "\n\r  $option3                                   "
+printf "\n\r  $option4                                   "
+printf "\n\r  $option5                                   "
+printf "\n\r  $option6                                   "
+printf "\n\r  $option7                                   "
+printf "\n\r  $option8                                   "
+printf "\n\r\e[1;96m> $option9                             \e[0m"
+printf "\n\r  $option10                                   "
+printf "\n\r  $option11                                   "
+
+tput sc
+for i in {1..11}
+do 
+tput cuu1
+tput sc
+done
+
+elif [[ $selected == 10 ]]; then 
+tput rc
+thetitle
+printf "\n\r  $option1                                   "
+printf "\n\r  $option2                                   "
+printf "\n\r  $option3                                   "
+printf "\n\r  $option4                                   "
+printf "\n\r  $option5                                   "
+printf "\n\r  $option6                                   "
+printf "\n\r  $option7                                   "
+printf "\n\r  $option8                                   "
+printf "\n\r  $option9                                   "
+printf "\n\r\e[1;96m> $option10                             \e[0m"
+printf "\n\r  $option11                                   "
+
+tput sc
+for i in {1..11}
+do 
+tput cuu1
+tput sc
+done
+
+elif [[ $selected == 11 ]]; then 
+tput rc
+thetitle
+printf "\n\r  $option1                                   "
+printf "\n\r  $option2                                   "
+printf "\n\r  $option3                                   "
+printf "\n\r  $option4                                   "
+printf "\n\r  $option5                                   "
+printf "\n\r  $option6                                   "
+printf "\n\r  $option7                                   "
+printf "\n\r  $option8                                   "
+printf "\n\r  $option9                                   "
+printf "\n\r  $option10                                   "
+printf "\n\r\e[1;96m> $option11                             \e[0m"
+
+tput sc
+for i in {1..11}
+do 
+tput cuu1
+tput sc
+done
+
+else
+selected=1
+display11
+fi
+}
+
+ifoption11 () {
+while true
+do
+read -r -sn1 t
+if [[ $t == A ]]; then 
+selected=$(($selected - 1))
+display11
+elif [[ $t == B ]]; then 
+selected=$(($selected + 1))
+display11
+elif [[ $t == "" ]]; then 
+enterbis ; enter
+fi
+done
+}
+
+
+
+
+
+
+############################### 12 OPTIONS
+display12 () {
+if [[ $selected == 1 ]]; then 
+tput rc
+thetitle
+printf "\n\r\e[1;96m> $option1                             \e[0m"
+printf "\n\r  $option2                                   "
+printf "\n\r  $option3                                   "
+printf "\n\r  $option4                                   "
+printf "\n\r  $option5                                   "
+printf "\n\r  $option6                                   "
+printf "\n\r  $option7                                   "
+printf "\n\r  $option8                                   "
+printf "\n\r  $option9                                   "
+printf "\n\r  $option10                                   "
+printf "\n\r  $option11                                   "
+printf "\n\r  $option12                                   "
+
+tput sc
+for i in {1..12}
+do 
+tput cuu1
+tput sc
+done
+
+elif [[ $selected == 2 ]]; then 
+tput rc
+thetitle
+printf "\n\r  $option1                                   "
+printf "\n\r\e[1;96m> $option2                             \e[0m"
+printf "\n\r  $option3                                   "
+printf "\n\r  $option4                                   "
+printf "\n\r  $option5                                   "
+printf "\n\r  $option6                                   "
+printf "\n\r  $option7                                   "
+printf "\n\r  $option8                                   "
+printf "\n\r  $option9                                   "
+printf "\n\r  $option10                                   "
+printf "\n\r  $option11                                   "
+printf "\n\r  $option12                                   "
+
+tput sc
+for i in {1..12}
+do 
+tput cuu1
+tput sc
+done
+
+elif [[ $selected == 3 ]]; then 
+tput rc
+thetitle
+printf "\n\r  $option1                                   "
+printf "\n\r  $option2                                   "
+printf "\n\r\e[1;96m> $option3                             \e[0m"
+printf "\n\r  $option4                                   "
+printf "\n\r  $option5                                   "
+printf "\n\r  $option6                                   "
+printf "\n\r  $option7                                   "
+printf "\n\r  $option8                                   "
+printf "\n\r  $option9                                   "
+printf "\n\r  $option10                                   "
+printf "\n\r  $option11                                   "
+printf "\n\r  $option12                                   "
+
+tput sc
+for i in {1..12}
+do 
+tput cuu1
+tput sc
+done
+
+elif [[ $selected == 4 ]]; then 
+tput rc
+thetitle
+printf "\n\r  $option1                                   "
+printf "\n\r  $option2                                   "
+printf "\n\r  $option3                                   "
+printf "\n\r\e[1;96m> $option4                             \e[0m"
+printf "\n\r  $option5                                   "
+printf "\n\r  $option6                                   "
+printf "\n\r  $option7                                   "
+printf "\n\r  $option8                                   "
+printf "\n\r  $option9                                   "
+printf "\n\r  $option10                                   "
+printf "\n\r  $option11                                   "
+printf "\n\r  $option12                                   "
+
+tput sc
+for i in {1..12}
+do 
+tput cuu1
+tput sc
+done
+
+elif [[ $selected == 5 ]]; then 
+tput rc
+thetitle
+printf "\n\r  $option1                                   "
+printf "\n\r  $option2                                   "
+printf "\n\r  $option3                                   "
+printf "\n\r  $option4                                   "
+printf "\n\r\e[1;96m> $option5                             \e[0m"
+printf "\n\r  $option6                                   "
+printf "\n\r  $option7                                   "
+printf "\n\r  $option8                                   "
+printf "\n\r  $option9                                   "
+printf "\n\r  $option10                                   "
+printf "\n\r  $option11                                   "
+printf "\n\r  $option12                                   "
+
+tput sc
+for i in {1..12}
+do 
+tput cuu1
+tput sc
+done
+
+elif [[ $selected == 6 ]]; then 
+tput rc
+thetitle
+printf "\n\r  $option1                                   "
+printf "\n\r  $option2                                   "
+printf "\n\r  $option3                                   "
+printf "\n\r  $option4                                   "
+printf "\n\r  $option5                                   "
+printf "\n\r\e[1;96m> $option6                             \e[0m"
+printf "\n\r  $option7                                   "
+printf "\n\r  $option8                                   "
+printf "\n\r  $option9                                   "
+printf "\n\r  $option10                                   "
+printf "\n\r  $option11                                   "
+printf "\n\r  $option12                                   "
+
+tput sc
+for i in {1..12}
+do 
+tput cuu1
+tput sc
+done
+
+elif [[ $selected == 7 ]]; then 
+tput rc
+thetitle
+printf "\n\r  $option1                                   "
+printf "\n\r  $option2                                   "
+printf "\n\r  $option3                                   "
+printf "\n\r  $option4                                   "
+printf "\n\r  $option5                                   "
+printf "\n\r  $option6                                   "
+printf "\n\r\e[1;96m> $option7                             \e[0m"
+printf "\n\r  $option8                                   "
+printf "\n\r  $option9                                   "
+printf "\n\r  $option10                                   "
+printf "\n\r  $option11                                   "
+printf "\n\r  $option12                                   "
+
+tput sc
+for i in {1..12}
+do 
+tput cuu1
+tput sc
+done
+
+elif [[ $selected == 8 ]]; then 
+tput rc
+thetitle
+printf "\n\r  $option1                                   "
+printf "\n\r  $option2                                   "
+printf "\n\r  $option3                                   "
+printf "\n\r  $option4                                   "
+printf "\n\r  $option5                                   "
+printf "\n\r  $option6                                   "
+printf "\n\r  $option7                                   "
+printf "\n\r\e[1;96m> $option8                             \e[0m"
+printf "\n\r  $option9                                   "
+printf "\n\r  $option10                                   "
+printf "\n\r  $option11                                   "
+printf "\n\r  $option12                                   "
+
+tput sc
+for i in {1..12}
+do 
+tput cuu1
+tput sc
+done
+
+elif [[ $selected == 9 ]]; then 
+tput rc
+thetitle
+printf "\n\r  $option1                                   "
+printf "\n\r  $option2                                   "
+printf "\n\r  $option3                                   "
+printf "\n\r  $option4                                   "
+printf "\n\r  $option5                                   "
+printf "\n\r  $option6                                   "
+printf "\n\r  $option7                                   "
+printf "\n\r  $option8                                   "
+printf "\n\r\e[1;96m> $option9                             \e[0m"
+printf "\n\r  $option10                                   "
+printf "\n\r  $option11                                   "
+printf "\n\r  $option12                                   "
+
+tput sc
+for i in {1..12}
+do 
+tput cuu1
+tput sc
+done
+
+elif [[ $selected == 10 ]]; then 
+tput rc
+thetitle
+printf "\n\r  $option1                                   "
+printf "\n\r  $option2                                   "
+printf "\n\r  $option3                                   "
+printf "\n\r  $option4                                   "
+printf "\n\r  $option5                                   "
+printf "\n\r  $option6                                   "
+printf "\n\r  $option7                                   "
+printf "\n\r  $option8                                   "
+printf "\n\r  $option9                                   "
+printf "\n\r\e[1;96m> $option10                             \e[0m"
+printf "\n\r  $option11                                   "
+printf "\n\r  $option12                                   "
+
+tput sc
+for i in {1..12}
+do 
+tput cuu1
+tput sc
+done
+
+elif [[ $selected == 11 ]]; then 
+tput rc
+thetitle
+printf "\n\r  $option1                                   "
+printf "\n\r  $option2                                   "
+printf "\n\r  $option3                                   "
+printf "\n\r  $option4                                   "
+printf "\n\r  $option5                                   "
+printf "\n\r  $option6                                   "
+printf "\n\r  $option7                                   "
+printf "\n\r  $option8                                   "
+printf "\n\r  $option9                                   "
+printf "\n\r  $option10                                   "
+printf "\n\r\e[1;96m> $option11                             \e[0m"
+printf "\n\r  $option12                                   "
+
+tput sc
+for i in {1..12}
+do 
+tput cuu1
+tput sc
+done
+
+elif [[ $selected == 12 ]]; then 
+tput rc
+thetitle
+printf "\n\r  $option1                                   "
+printf "\n\r  $option2                                   "
+printf "\n\r  $option3                                   "
+printf "\n\r  $option4                                   "
+printf "\n\r  $option5                                   "
+printf "\n\r  $option6                                   "
+printf "\n\r  $option7                                   "
+printf "\n\r  $option8                                   "
+printf "\n\r  $option9                                   "
+printf "\n\r  $option10                                   "
+printf "\n\r  $option11                                   "
+printf "\n\r\e[1;96m> $option12                             \e[0m"
+
+tput sc
+for i in {1..12}
+do 
+tput cuu1
+tput sc
+done
+
+
+else
+selected=1
+display12
+fi
+}
+
+ifoption12 () {
+while true
+do
+read -r -sn1 t
+if [[ $t == A ]]; then 
+selected=$(($selected - 1))
+display12
+elif [[ $t == B ]]; then 
+selected=$(($selected + 1))
+display12
+elif [[ $t == "" ]]; then 
+enterbis ; enter
+fi
+done
+}
+
+
+
+############################### 13 OPTIONS
+display13 () {
+if [[ $selected == 1 ]]; then 
+tput rc
+thetitle
+printf "\n\r\e[1;96m> $option1                             \e[0m"
+printf "\n\r  $option2                                   "
+printf "\n\r  $option3                                   "
+printf "\n\r  $option4                                   "
+printf "\n\r  $option5                                   "
+printf "\n\r  $option6                                   "
+printf "\n\r  $option7                                   "
+printf "\n\r  $option8                                   "
+printf "\n\r  $option9                                   "
+printf "\n\r  $option10                                   "
+printf "\n\r  $option11                                   "
+printf "\n\r  $option12                                   "
+printf "\n\r  $option13                                   "
+
+tput sc
+for i in {1..13}
+do 
+tput cuu1
+tput sc
+done
+
+elif [[ $selected == 2 ]]; then 
+tput rc
+thetitle
+printf "\n\r  $option1                                   "
+printf "\n\r\e[1;96m> $option2                             \e[0m"
+printf "\n\r  $option3                                   "
+printf "\n\r  $option4                                   "
+printf "\n\r  $option5                                   "
+printf "\n\r  $option6                                   "
+printf "\n\r  $option7                                   "
+printf "\n\r  $option8                                   "
+printf "\n\r  $option9                                   "
+printf "\n\r  $option10                                   "
+printf "\n\r  $option11                                   "
+printf "\n\r  $option12                                   "
+printf "\n\r  $option13                                   "
+
+tput sc
+for i in {1..13}
+do 
+tput cuu1
+tput sc
+done
+
+elif [[ $selected == 3 ]]; then 
+tput rc
+thetitle
+printf "\n\r  $option1                                   "
+printf "\n\r  $option2                                   "
+printf "\n\r\e[1;96m> $option3                             \e[0m"
+printf "\n\r  $option4                                   "
+printf "\n\r  $option5                                   "
+printf "\n\r  $option6                                   "
+printf "\n\r  $option7                                   "
+printf "\n\r  $option8                                   "
+printf "\n\r  $option9                                   "
+printf "\n\r  $option10                                   "
+printf "\n\r  $option11                                   "
+printf "\n\r  $option12                                   "
+printf "\n\r  $option13                                   "
+
+tput sc
+for i in {1..13}
+do 
+tput cuu1
+tput sc
+done
+
+elif [[ $selected == 4 ]]; then 
+tput rc
+thetitle
+printf "\n\r  $option1                                   "
+printf "\n\r  $option2                                   "
+printf "\n\r  $option3                                   "
+printf "\n\r\e[1;96m> $option4                             \e[0m"
+printf "\n\r  $option5                                   "
+printf "\n\r  $option6                                   "
+printf "\n\r  $option7                                   "
+printf "\n\r  $option8                                   "
+printf "\n\r  $option9                                   "
+printf "\n\r  $option10                                   "
+printf "\n\r  $option11                                   "
+printf "\n\r  $option12                                   "
+printf "\n\r  $option13                                   "
+
+tput sc
+for i in {1..13}
+do 
+tput cuu1
+tput sc
+done
+
+elif [[ $selected == 5 ]]; then 
+tput rc
+thetitle
+printf "\n\r  $option1                                   "
+printf "\n\r  $option2                                   "
+printf "\n\r  $option3                                   "
+printf "\n\r  $option4                                   "
+printf "\n\r\e[1;96m> $option5                             \e[0m"
+printf "\n\r  $option6                                   "
+printf "\n\r  $option7                                   "
+printf "\n\r  $option8                                   "
+printf "\n\r  $option9                                   "
+printf "\n\r  $option10                                   "
+printf "\n\r  $option11                                   "
+printf "\n\r  $option12                                   "
+printf "\n\r  $option13                                   "
+
+tput sc
+for i in {1..13}
+do 
+tput cuu1
+tput sc
+done
+
+elif [[ $selected == 6 ]]; then 
+tput rc
+thetitle
+printf "\n\r  $option1                                   "
+printf "\n\r  $option2                                   "
+printf "\n\r  $option3                                   "
+printf "\n\r  $option4                                   "
+printf "\n\r  $option5                                   "
+printf "\n\r\e[1;96m> $option6                             \e[0m"
+printf "\n\r  $option7                                   "
+printf "\n\r  $option8                                   "
+printf "\n\r  $option9                                   "
+printf "\n\r  $option10                                   "
+printf "\n\r  $option11                                   "
+printf "\n\r  $option12                                   "
+printf "\n\r  $option13                                   "
+
+tput sc
+for i in {1..13}
+do 
+tput cuu1
+tput sc
+done
+
+elif [[ $selected == 7 ]]; then 
+tput rc
+thetitle
+printf "\n\r  $option1                                   "
+printf "\n\r  $option2                                   "
+printf "\n\r  $option3                                   "
+printf "\n\r  $option4                                   "
+printf "\n\r  $option5                                   "
+printf "\n\r  $option6                                   "
+printf "\n\r\e[1;96m> $option7                             \e[0m"
+printf "\n\r  $option8                                   "
+printf "\n\r  $option9                                   "
+printf "\n\r  $option10                                   "
+printf "\n\r  $option11                                   "
+printf "\n\r  $option12                                   "
+printf "\n\r  $option13                                   "
+
+tput sc
+for i in {1..13}
+do 
+tput cuu1
+tput sc
+done
+
+elif [[ $selected == 8 ]]; then 
+tput rc
+thetitle
+printf "\n\r  $option1                                   "
+printf "\n\r  $option2                                   "
+printf "\n\r  $option3                                   "
+printf "\n\r  $option4                                   "
+printf "\n\r  $option5                                   "
+printf "\n\r  $option6                                   "
+printf "\n\r  $option7                                   "
+printf "\n\r\e[1;96m> $option8                             \e[0m"
+printf "\n\r  $option9                                   "
+printf "\n\r  $option10                                   "
+printf "\n\r  $option11                                   "
+printf "\n\r  $option12                                   "
+printf "\n\r  $option13                                   "
+
+tput sc
+for i in {1..13}
+do 
+tput cuu1
+tput sc
+done
+
+elif [[ $selected == 9 ]]; then 
+tput rc
+thetitle
+printf "\n\r  $option1                                   "
+printf "\n\r  $option2                                   "
+printf "\n\r  $option3                                   "
+printf "\n\r  $option4                                   "
+printf "\n\r  $option5                                   "
+printf "\n\r  $option6                                   "
+printf "\n\r  $option7                                   "
+printf "\n\r  $option8                                   "
+printf "\n\r\e[1;96m> $option9                             \e[0m"
+printf "\n\r  $option10                                   "
+printf "\n\r  $option11                                   "
+printf "\n\r  $option12                                   "
+printf "\n\r  $option13                                   "
+
+tput sc
+for i in {1..13}
+do 
+tput cuu1
+tput sc
+done
+
+elif [[ $selected == 10 ]]; then 
+tput rc
+thetitle
+printf "\n\r  $option1                                   "
+printf "\n\r  $option2                                   "
+printf "\n\r  $option3                                   "
+printf "\n\r  $option4                                   "
+printf "\n\r  $option5                                   "
+printf "\n\r  $option6                                   "
+printf "\n\r  $option7                                   "
+printf "\n\r  $option8                                   "
+printf "\n\r  $option9                                   "
+printf "\n\r\e[1;96m> $option10                             \e[0m"
+printf "\n\r  $option11                                   "
+printf "\n\r  $option12                                   "
+printf "\n\r  $option13                                   "
+
+tput sc
+for i in {1..13}
+do 
+tput cuu1
+tput sc
+done
+
+elif [[ $selected == 11 ]]; then 
+tput rc
+thetitle
+printf "\n\r  $option1                                   "
+printf "\n\r  $option2                                   "
+printf "\n\r  $option3                                   "
+printf "\n\r  $option4                                   "
+printf "\n\r  $option5                                   "
+printf "\n\r  $option6                                   "
+printf "\n\r  $option7                                   "
+printf "\n\r  $option8                                   "
+printf "\n\r  $option9                                   "
+printf "\n\r  $option10                                   "
+printf "\n\r\e[1;96m> $option11                             \e[0m"
+printf "\n\r  $option12                                   "
+printf "\n\r  $option13                                   "
+
+tput sc
+for i in {1..13}
+do 
+tput cuu1
+tput sc
+done
+
+elif [[ $selected == 12 ]]; then 
+tput rc
+thetitle
+printf "\n\r  $option1                                   "
+printf "\n\r  $option2                                   "
+printf "\n\r  $option3                                   "
+printf "\n\r  $option4                                   "
+printf "\n\r  $option5                                   "
+printf "\n\r  $option6                                   "
+printf "\n\r  $option7                                   "
+printf "\n\r  $option8                                   "
+printf "\n\r  $option9                                   "
+printf "\n\r  $option10                                   "
+printf "\n\r  $option11                                   "
+printf "\n\r\e[1;96m> $option12                             \e[0m"
+printf "\n\r  $option13                                   "
+
+tput sc
+for i in {1..13}
+do 
+tput cuu1
+tput sc
+done
+
+elif [[ $selected == 13 ]]; then 
+tput rc
+thetitle
+printf "\n\r  $option1                                   "
+printf "\n\r  $option2                                   "
+printf "\n\r  $option3                                   "
+printf "\n\r  $option4                                   "
+printf "\n\r  $option5                                   "
+printf "\n\r  $option6                                   "
+printf "\n\r  $option7                                   "
+printf "\n\r  $option8                                   "
+printf "\n\r  $option9                                   "
+printf "\n\r  $option10                                   "
+printf "\n\r  $option11                                   "
+printf "\n\r  $option12                                   "
+printf "\n\r\e[1;96m> $option13                             \e[0m"
+
+tput sc
+for i in {1..13}
+do 
+tput cuu1
+tput sc
+done
+
+
+
+
+else
+selected=1
+display12
+fi
+}
+
+ifoption13 () {
+while true
+do
+read -r -sn1 t
+if [[ $t == A ]]; then 
+selected=$(($selected - 1))
+display13
+elif [[ $t == B ]]; then 
+selected=$(($selected + 1))
+display13
+elif [[ $t == "" ]]; then 
+enterbis ; enter
+fi
+done
+}
+
+
+
+############################### 14 OPTIONS
+display14 () {
+if [[ $selected == 1 ]]; then 
+tput rc
+thetitle
+printf "\n\r\e[1;96m> $option1                             \e[0m"
+printf "\n\r  $option2                                   "
+printf "\n\r  $option3                                   "
+printf "\n\r  $option4                                   "
+printf "\n\r  $option5                                   "
+printf "\n\r  $option6                                   "
+printf "\n\r  $option7                                   "
+printf "\n\r  $option8                                   "
+printf "\n\r  $option9                                   "
+printf "\n\r  $option10                                   "
+printf "\n\r  $option11                                   "
+printf "\n\r  $option12                                   "
+printf "\n\r  $option13                                   "
+printf "\n\r  $option14                                   "
+
+tput sc
+for i in {1..14}
+do 
+tput cuu1
+tput sc
+done
+
+elif [[ $selected == 2 ]]; then 
+tput rc
+thetitle
+printf "\n\r  $option1                                   "
+printf "\n\r\e[1;96m> $option2                             \e[0m"
+printf "\n\r  $option3                                   "
+printf "\n\r  $option4                                   "
+printf "\n\r  $option5                                   "
+printf "\n\r  $option6                                   "
+printf "\n\r  $option7                                   "
+printf "\n\r  $option8                                   "
+printf "\n\r  $option9                                   "
+printf "\n\r  $option10                                   "
+printf "\n\r  $option11                                   "
+printf "\n\r  $option12                                   "
+printf "\n\r  $option13                                   "
+printf "\n\r  $option14                                   "
+
+tput sc
+for i in {1..14}
+do 
+tput cuu1
+tput sc
+done
+
+elif [[ $selected == 3 ]]; then 
+tput rc
+thetitle
+printf "\n\r  $option1                                   "
+printf "\n\r  $option2                                   "
+printf "\n\r\e[1;96m> $option3                             \e[0m"
+printf "\n\r  $option4                                   "
+printf "\n\r  $option5                                   "
+printf "\n\r  $option6                                   "
+printf "\n\r  $option7                                   "
+printf "\n\r  $option8                                   "
+printf "\n\r  $option9                                   "
+printf "\n\r  $option10                                   "
+printf "\n\r  $option11                                   "
+printf "\n\r  $option12                                   "
+printf "\n\r  $option13                                   "
+printf "\n\r  $option14                                   "
+
+tput sc
+for i in {1..14}
+do 
+tput cuu1
+tput sc
+done
+
+elif [[ $selected == 4 ]]; then 
+tput rc
+thetitle
+printf "\n\r  $option1                                   "
+printf "\n\r  $option2                                   "
+printf "\n\r  $option3                                   "
+printf "\n\r\e[1;96m> $option4                             \e[0m"
+printf "\n\r  $option5                                   "
+printf "\n\r  $option6                                   "
+printf "\n\r  $option7                                   "
+printf "\n\r  $option8                                   "
+printf "\n\r  $option9                                   "
+printf "\n\r  $option10                                   "
+printf "\n\r  $option11                                   "
+printf "\n\r  $option12                                   "
+printf "\n\r  $option13                                   "
+printf "\n\r  $option14                                   "
+
+tput sc
+for i in {1..14}
+do 
+tput cuu1
+tput sc
+done
+
+elif [[ $selected == 5 ]]; then 
+tput rc
+thetitle
+printf "\n\r  $option1                                   "
+printf "\n\r  $option2                                   "
+printf "\n\r  $option3                                   "
+printf "\n\r  $option4                                   "
+printf "\n\r\e[1;96m> $option5                             \e[0m"
+printf "\n\r  $option6                                   "
+printf "\n\r  $option7                                   "
+printf "\n\r  $option8                                   "
+printf "\n\r  $option9                                   "
+printf "\n\r  $option10                                   "
+printf "\n\r  $option11                                   "
+printf "\n\r  $option12                                   "
+printf "\n\r  $option13                                   "
+printf "\n\r  $option14                                   "
+
+tput sc
+for i in {1..14}
+do 
+tput cuu1
+tput sc
+done
+
+elif [[ $selected == 6 ]]; then 
+tput rc
+thetitle
+printf "\n\r  $option1                                   "
+printf "\n\r  $option2                                   "
+printf "\n\r  $option3                                   "
+printf "\n\r  $option4                                   "
+printf "\n\r  $option5                                   "
+printf "\n\r\e[1;96m> $option6                             \e[0m"
+printf "\n\r  $option7                                   "
+printf "\n\r  $option8                                   "
+printf "\n\r  $option9                                   "
+printf "\n\r  $option10                                   "
+printf "\n\r  $option11                                   "
+printf "\n\r  $option12                                   "
+printf "\n\r  $option13                                   "
+printf "\n\r  $option14                                   "
+
+tput sc
+for i in {1..14}
+do 
+tput cuu1
+tput sc
+done
+
+elif [[ $selected == 7 ]]; then 
+tput rc
+thetitle
+printf "\n\r  $option1                                   "
+printf "\n\r  $option2                                   "
+printf "\n\r  $option3                                   "
+printf "\n\r  $option4                                   "
+printf "\n\r  $option5                                   "
+printf "\n\r  $option6                                   "
+printf "\n\r\e[1;96m> $option7                             \e[0m"
+printf "\n\r  $option8                                   "
+printf "\n\r  $option9                                   "
+printf "\n\r  $option10                                   "
+printf "\n\r  $option11                                   "
+printf "\n\r  $option12                                   "
+printf "\n\r  $option13                                   "
+printf "\n\r  $option14                                   "
+
+tput sc
+for i in {1..14}
+do 
+tput cuu1
+tput sc
+done
+
+elif [[ $selected == 8 ]]; then 
+tput rc
+thetitle
+printf "\n\r  $option1                                   "
+printf "\n\r  $option2                                   "
+printf "\n\r  $option3                                   "
+printf "\n\r  $option4                                   "
+printf "\n\r  $option5                                   "
+printf "\n\r  $option6                                   "
+printf "\n\r  $option7                                   "
+printf "\n\r\e[1;96m> $option8                             \e[0m"
+printf "\n\r  $option9                                   "
+printf "\n\r  $option10                                   "
+printf "\n\r  $option11                                   "
+printf "\n\r  $option12                                   "
+printf "\n\r  $option13                                   "
+printf "\n\r  $option14                                   "
+
+tput sc
+for i in {1..14}
+do 
+tput cuu1
+tput sc
+done
+
+elif [[ $selected == 9 ]]; then 
+tput rc
+thetitle
+printf "\n\r  $option1                                   "
+printf "\n\r  $option2                                   "
+printf "\n\r  $option3                                   "
+printf "\n\r  $option4                                   "
+printf "\n\r  $option5                                   "
+printf "\n\r  $option6                                   "
+printf "\n\r  $option7                                   "
+printf "\n\r  $option8                                   "
+printf "\n\r\e[1;96m> $option9                             \e[0m"
+printf "\n\r  $option10                                   "
+printf "\n\r  $option11                                   "
+printf "\n\r  $option12                                   "
+printf "\n\r  $option13                                   "
+printf "\n\r  $option14                                   "
+
+tput sc
+for i in {1..14}
+do 
+tput cuu1
+tput sc
+done
+
+elif [[ $selected == 10 ]]; then 
+tput rc
+thetitle
+printf "\n\r  $option1                                   "
+printf "\n\r  $option2                                   "
+printf "\n\r  $option3                                   "
+printf "\n\r  $option4                                   "
+printf "\n\r  $option5                                   "
+printf "\n\r  $option6                                   "
+printf "\n\r  $option7                                   "
+printf "\n\r  $option8                                   "
+printf "\n\r  $option9                                   "
+printf "\n\r\e[1;96m> $option10                             \e[0m"
+printf "\n\r  $option11                                   "
+printf "\n\r  $option12                                   "
+printf "\n\r  $option13                                   "
+printf "\n\r  $option14                                   "
+
+tput sc
+for i in {1..14}
+do 
+tput cuu1
+tput sc
+done
+
+elif [[ $selected == 11 ]]; then 
+tput rc
+thetitle
+printf "\n\r  $option1                                   "
+printf "\n\r  $option2                                   "
+printf "\n\r  $option3                                   "
+printf "\n\r  $option4                                   "
+printf "\n\r  $option5                                   "
+printf "\n\r  $option6                                   "
+printf "\n\r  $option7                                   "
+printf "\n\r  $option8                                   "
+printf "\n\r  $option9                                   "
+printf "\n\r  $option10                                   "
+printf "\n\r\e[1;96m> $option11                             \e[0m"
+printf "\n\r  $option12                                   "
+printf "\n\r  $option13                                   "
+printf "\n\r  $option14                                   "
+
+tput sc
+for i in {1..14}
+do 
+tput cuu1
+tput sc
+done
+
+elif [[ $selected == 12 ]]; then 
+tput rc
+thetitle
+printf "\n\r  $option1                                   "
+printf "\n\r  $option2                                   "
+printf "\n\r  $option3                                   "
+printf "\n\r  $option4                                   "
+printf "\n\r  $option5                                   "
+printf "\n\r  $option6                                   "
+printf "\n\r  $option7                                   "
+printf "\n\r  $option8                                   "
+printf "\n\r  $option9                                   "
+printf "\n\r  $option10                                   "
+printf "\n\r  $option11                                   "
+printf "\n\r\e[1;96m> $option12                             \e[0m"
+printf "\n\r  $option13                                   "
+printf "\n\r  $option14                                   "
+
+tput sc
+for i in {1..14}
+do 
+tput cuu1
+tput sc
+done
+
+elif [[ $selected == 13 ]]; then 
+tput rc
+thetitle
+printf "\n\r  $option1                                   "
+printf "\n\r  $option2                                   "
+printf "\n\r  $option3                                   "
+printf "\n\r  $option4                                   "
+printf "\n\r  $option5                                   "
+printf "\n\r  $option6                                   "
+printf "\n\r  $option7                                   "
+printf "\n\r  $option8                                   "
+printf "\n\r  $option9                                   "
+printf "\n\r  $option10                                   "
+printf "\n\r  $option11                                   "
+printf "\n\r  $option12                                   "
+printf "\n\r\e[1;96m> $option13                             \e[0m"
+printf "\n\r  $option14                                   "
+
+tput sc
+for i in {1..14}
+do 
+tput cuu1
+tput sc
+done
+
+elif [[ $selected == 14 ]]; then 
+tput rc
+thetitle
+printf "\n\r  $option1                                   "
+printf "\n\r  $option2                                   "
+printf "\n\r  $option3                                   "
+printf "\n\r  $option4                                   "
+printf "\n\r  $option5                                   "
+printf "\n\r  $option6                                   "
+printf "\n\r  $option7                                   "
+printf "\n\r  $option8                                   "
+printf "\n\r  $option9                                   "
+printf "\n\r  $option10                                   "
+printf "\n\r  $option11                                   "
+printf "\n\r  $option12                                   "
+printf "\n\r  $option13                                   "
+printf "\n\r\e[1;96m> $option14                             \e[0m"
+
+tput sc
+for i in {1..14}
+do 
+tput cuu1
+tput sc
+done
+
+
+else
+selected=1
+display14
+fi
+}
+
+ifoption14 () {
+while true
+do
+read -r -sn1 t
+if [[ $t == A ]]; then 
+selected=$(($selected - 1))
+display14
+elif [[ $t == B ]]; then 
+selected=$(($selected + 1))
+display14
+elif [[ $t == "" ]]; then 
+enterbis ; enter
+fi
+done
+}
+
+
+
+
+
+
+############################### 15 OPTIONS
+display15 () {
+if [[ $selected == 1 ]]; then 
+tput rc
+thetitle
+printf "\n\r\e[1;96m> $option1                             \e[0m"
+printf "\n\r  $option2                                   "
+printf "\n\r  $option3                                   "
+printf "\n\r  $option4                                   "
+printf "\n\r  $option5                                   "
+printf "\n\r  $option6                                   "
+printf "\n\r  $option7                                   "
+printf "\n\r  $option8                                   "
+printf "\n\r  $option9                                   "
+printf "\n\r  $option10                                   "
+printf "\n\r  $option11                                   "
+printf "\n\r  $option12                                   "
+printf "\n\r  $option13                                   "
+printf "\n\r  $option14                                   "
+printf "\n\r  $option15                                   "
+
+tput sc
+for i in {1..15}
+do 
+tput cuu1
+tput sc
+done
+
+elif [[ $selected == 2 ]]; then 
+tput rc
+thetitle
+printf "\n\r  $option1                                   "
+printf "\n\r\e[1;96m> $option2                             \e[0m"
+printf "\n\r  $option3                                   "
+printf "\n\r  $option4                                   "
+printf "\n\r  $option5                                   "
+printf "\n\r  $option6                                   "
+printf "\n\r  $option7                                   "
+printf "\n\r  $option8                                   "
+printf "\n\r  $option9                                   "
+printf "\n\r  $option10                                   "
+printf "\n\r  $option11                                   "
+printf "\n\r  $option12                                   "
+printf "\n\r  $option13                                   "
+printf "\n\r  $option14                                   "
+printf "\n\r  $option15                                   "
+
+tput sc
+for i in {1..15}
+do 
+tput cuu1
+tput sc
+done
+
+elif [[ $selected == 3 ]]; then 
+tput rc
+thetitle
+printf "\n\r  $option1                                   "
+printf "\n\r  $option2                                   "
+printf "\n\r\e[1;96m> $option3                             \e[0m"
+printf "\n\r  $option4                                   "
+printf "\n\r  $option5                                   "
+printf "\n\r  $option6                                   "
+printf "\n\r  $option7                                   "
+printf "\n\r  $option8                                   "
+printf "\n\r  $option9                                   "
+printf "\n\r  $option10                                   "
+printf "\n\r  $option11                                   "
+printf "\n\r  $option12                                   "
+printf "\n\r  $option13                                   "
+printf "\n\r  $option14                                   "
+printf "\n\r  $option15                                   "
+
+tput sc
+for i in {1..15}
+do 
+tput cuu1
+tput sc
+done
+
+elif [[ $selected == 4 ]]; then 
+tput rc
+thetitle
+printf "\n\r  $option1                                   "
+printf "\n\r  $option2                                   "
+printf "\n\r  $option3                                   "
+printf "\n\r\e[1;96m> $option4                             \e[0m"
+printf "\n\r  $option5                                   "
+printf "\n\r  $option6                                   "
+printf "\n\r  $option7                                   "
+printf "\n\r  $option8                                   "
+printf "\n\r  $option9                                   "
+printf "\n\r  $option10                                   "
+printf "\n\r  $option11                                   "
+printf "\n\r  $option12                                   "
+printf "\n\r  $option13                                   "
+printf "\n\r  $option14                                   "
+printf "\n\r  $option15                                   "
+
+tput sc
+for i in {1..15}
+do 
+tput cuu1
+tput sc
+done
+
+elif [[ $selected == 5 ]]; then 
+tput rc
+thetitle
+printf "\n\r  $option1                                   "
+printf "\n\r  $option2                                   "
+printf "\n\r  $option3                                   "
+printf "\n\r  $option4                                   "
+printf "\n\r\e[1;96m> $option5                             \e[0m"
+printf "\n\r  $option6                                   "
+printf "\n\r  $option7                                   "
+printf "\n\r  $option8                                   "
+printf "\n\r  $option9                                   "
+printf "\n\r  $option10                                   "
+printf "\n\r  $option11                                   "
+printf "\n\r  $option12                                   "
+printf "\n\r  $option13                                   "
+printf "\n\r  $option14                                   "
+printf "\n\r  $option15                                   "
+
+tput sc
+for i in {1..15}
+do 
+tput cuu1
+tput sc
+done
+
+elif [[ $selected == 6 ]]; then 
+tput rc
+thetitle
+printf "\n\r  $option1                                   "
+printf "\n\r  $option2                                   "
+printf "\n\r  $option3                                   "
+printf "\n\r  $option4                                   "
+printf "\n\r  $option5                                   "
+printf "\n\r\e[1;96m> $option6                             \e[0m"
+printf "\n\r  $option7                                   "
+printf "\n\r  $option8                                   "
+printf "\n\r  $option9                                   "
+printf "\n\r  $option10                                   "
+printf "\n\r  $option11                                   "
+printf "\n\r  $option12                                   "
+printf "\n\r  $option13                                   "
+printf "\n\r  $option14                                   "
+printf "\n\r  $option15                                   "
+
+tput sc
+for i in {1..15}
+do 
+tput cuu1
+tput sc
+done
+
+elif [[ $selected == 7 ]]; then 
+tput rc
+thetitle
+printf "\n\r  $option1                                   "
+printf "\n\r  $option2                                   "
+printf "\n\r  $option3                                   "
+printf "\n\r  $option4                                   "
+printf "\n\r  $option5                                   "
+printf "\n\r  $option6                                   "
+printf "\n\r\e[1;96m> $option7                             \e[0m"
+printf "\n\r  $option8                                   "
+printf "\n\r  $option9                                   "
+printf "\n\r  $option10                                   "
+printf "\n\r  $option11                                   "
+printf "\n\r  $option12                                   "
+printf "\n\r  $option13                                   "
+printf "\n\r  $option14                                   "
+printf "\n\r  $option15                                   "
+
+tput sc
+for i in {1..15}
+do 
+tput cuu1
+tput sc
+done
+
+elif [[ $selected == 8 ]]; then 
+tput rc
+thetitle
+printf "\n\r  $option1                                   "
+printf "\n\r  $option2                                   "
+printf "\n\r  $option3                                   "
+printf "\n\r  $option4                                   "
+printf "\n\r  $option5                                   "
+printf "\n\r  $option6                                   "
+printf "\n\r  $option7                                   "
+printf "\n\r\e[1;96m> $option8                             \e[0m"
+printf "\n\r  $option9                                   "
+printf "\n\r  $option10                                   "
+printf "\n\r  $option11                                   "
+printf "\n\r  $option12                                   "
+printf "\n\r  $option13                                   "
+printf "\n\r  $option14                                   "
+printf "\n\r  $option15                                   "
+
+tput sc
+for i in {1..15}
+do 
+tput cuu1
+tput sc
+done
+
+elif [[ $selected == 9 ]]; then 
+tput rc
+thetitle
+printf "\n\r  $option1                                   "
+printf "\n\r  $option2                                   "
+printf "\n\r  $option3                                   "
+printf "\n\r  $option4                                   "
+printf "\n\r  $option5                                   "
+printf "\n\r  $option6                                   "
+printf "\n\r  $option7                                   "
+printf "\n\r  $option8                                   "
+printf "\n\r\e[1;96m> $option9                             \e[0m"
+printf "\n\r  $option10                                   "
+printf "\n\r  $option11                                   "
+printf "\n\r  $option12                                   "
+printf "\n\r  $option13                                   "
+printf "\n\r  $option14                                   "
+printf "\n\r  $option15                                   "
+
+tput sc
+for i in {1..15}
+do 
+tput cuu1
+tput sc
+done
+
+elif [[ $selected == 10 ]]; then 
+tput rc
+thetitle
+printf "\n\r  $option1                                   "
+printf "\n\r  $option2                                   "
+printf "\n\r  $option3                                   "
+printf "\n\r  $option4                                   "
+printf "\n\r  $option5                                   "
+printf "\n\r  $option6                                   "
+printf "\n\r  $option7                                   "
+printf "\n\r  $option8                                   "
+printf "\n\r  $option9                                   "
+printf "\n\r\e[1;96m> $option10                             \e[0m"
+printf "\n\r  $option11                                   "
+printf "\n\r  $option12                                   "
+printf "\n\r  $option13                                   "
+printf "\n\r  $option14                                   "
+printf "\n\r  $option15                                   "
+
+tput sc
+for i in {1..15}
+do 
+tput cuu1
+tput sc
+done
+
+elif [[ $selected == 11 ]]; then 
+tput rc
+thetitle
+printf "\n\r  $option1                                   "
+printf "\n\r  $option2                                   "
+printf "\n\r  $option3                                   "
+printf "\n\r  $option4                                   "
+printf "\n\r  $option5                                   "
+printf "\n\r  $option6                                   "
+printf "\n\r  $option7                                   "
+printf "\n\r  $option8                                   "
+printf "\n\r  $option9                                   "
+printf "\n\r  $option10                                   "
+printf "\n\r\e[1;96m> $option11                             \e[0m"
+printf "\n\r  $option12                                   "
+printf "\n\r  $option13                                   "
+printf "\n\r  $option14                                   "
+printf "\n\r  $option15                                   "
+
+tput sc
+for i in {1..15}
+do 
+tput cuu1
+tput sc
+done
+
+elif [[ $selected == 12 ]]; then 
+tput rc
+thetitle
+printf "\n\r  $option1                                   "
+printf "\n\r  $option2                                   "
+printf "\n\r  $option3                                   "
+printf "\n\r  $option4                                   "
+printf "\n\r  $option5                                   "
+printf "\n\r  $option6                                   "
+printf "\n\r  $option7                                   "
+printf "\n\r  $option8                                   "
+printf "\n\r  $option9                                   "
+printf "\n\r  $option10                                   "
+printf "\n\r  $option11                                   "
+printf "\n\r\e[1;96m> $option12                             \e[0m"
+printf "\n\r  $option13                                   "
+printf "\n\r  $option14                                   "
+printf "\n\r  $option15                                   "
+
+tput sc
+for i in {1..15}
+do 
+tput cuu1
+tput sc
+done
+
+elif [[ $selected == 13 ]]; then 
+tput rc
+thetitle
+printf "\n\r  $option1                                   "
+printf "\n\r  $option2                                   "
+printf "\n\r  $option3                                   "
+printf "\n\r  $option4                                   "
+printf "\n\r  $option5                                   "
+printf "\n\r  $option6                                   "
+printf "\n\r  $option7                                   "
+printf "\n\r  $option8                                   "
+printf "\n\r  $option9                                   "
+printf "\n\r  $option10                                   "
+printf "\n\r  $option11                                   "
+printf "\n\r  $option12                                   "
+printf "\n\r\e[1;96m> $option13                             \e[0m"
+printf "\n\r  $option14                                   "
+printf "\n\r  $option15                                   "
+
+tput sc
+for i in {1..15}
+do 
+tput cuu1
+tput sc
+done
+
+elif [[ $selected == 14 ]]; then 
+tput rc
+thetitle
+printf "\n\r  $option1                                   "
+printf "\n\r  $option2                                   "
+printf "\n\r  $option3                                   "
+printf "\n\r  $option4                                   "
+printf "\n\r  $option5                                   "
+printf "\n\r  $option6                                   "
+printf "\n\r  $option7                                   "
+printf "\n\r  $option8                                   "
+printf "\n\r  $option9                                   "
+printf "\n\r  $option10                                   "
+printf "\n\r  $option11                                   "
+printf "\n\r  $option12                                   "
+printf "\n\r  $option13                                   "
+printf "\n\r\e[1;96m> $option14                             \e[0m"
+printf "\n\r  $option15                                   "
+
+tput sc
+for i in {1..15}
+do 
+tput cuu1
+tput sc
+done
+
+elif [[ $selected == 15 ]]; then 
+tput rc
+thetitle
+printf "\n\r  $option1                                   "
+printf "\n\r  $option2                                   "
+printf "\n\r  $option3                                   "
+printf "\n\r  $option4                                   "
+printf "\n\r  $option5                                   "
+printf "\n\r  $option6                                   "
+printf "\n\r  $option7                                   "
+printf "\n\r  $option8                                   "
+printf "\n\r  $option9                                   "
+printf "\n\r  $option10                                   "
+printf "\n\r  $option11                                   "
+printf "\n\r  $option12                                   "
+printf "\n\r  $option13                                   "
+printf "\n\r  $option14                                   "
+printf "\n\r\e[1;96m> $option15                             \e[0m"
+
+tput sc
+for i in {1..15}
+do 
+tput cuu1
+tput sc
+done
+
+else
+selected=1
+display15
+fi
+}
+
+ifoption15 () {
+while true
+do
+read -r -sn1 t
+if [[ $t == A ]]; then 
+selected=$(($selected - 1))
+display15
+elif [[ $t == B ]]; then 
+selected=$(($selected + 1))
+display15
+elif [[ $t == "" ]]; then 
+enterbis ; enter
+fi
+done
+}
+
+
+
     if [[ $i == 1 ]]; then
     while true
     do
@@ -1479,6 +3258,41 @@ done
     do
     display10
     ifoption10
+    done
+
+    elif [[ $i == 11 ]]; then
+    while true
+    do
+    display11
+    ifoption11
+    done
+
+    elif [[ $i == 12 ]]; then
+    while true
+    do
+    display12
+    ifoption12
+    done
+
+    elif [[ $i == 13 ]]; then
+    while true
+    do
+    display13
+    ifoption13
+    done
+
+    elif [[ $i == 14 ]]; then
+    while true
+    do
+    display14
+    ifoption14
+    done
+
+    elif [[ $i == 15 ]]; then
+    while true
+    do
+    display15
+    ifoption15
     done
 
     fi
