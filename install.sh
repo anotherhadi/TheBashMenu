@@ -2,7 +2,7 @@
 rm README.md
 rm menuexemple.gif
 rm menu.gif
-
+rm menualternative.jpg
 mv bmenu.sh ~/.bmenu
 chmod +x ~/.bmenu
 ########################### ADD TO PATH
