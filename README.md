@@ -6,7 +6,7 @@
 ### How it works:
 <p>Create your own beautiful menu with a simple command, add a title, a subtitle and
 add up to 10 options !</p>
-<p>There is a file named "elements.sh" containing different example input, output and an example menu</p>
+<p>There is a file named "elements.sh" containing different example input, output, read function and loop. You can find a "menuexemple.sh", you can edit it to create your own menu</p>
 <p>Work on : MacOs, KaliLinux [And probably more, tell me if you try it]</p>
 
 ### Install:
@@ -49,7 +49,7 @@ bash install.sh
       #This is Option 2
       #Type Your command here
 
-    elif [[ $selected == 3 ]]; then    # You can copy/paste this for more options, change the 3 to 4
+    elif [[ $selected == 3 ]]; then # Copy/paste to get more options, change 3 to 4
       #This is Option 3
       #Type Your command here
   fi
