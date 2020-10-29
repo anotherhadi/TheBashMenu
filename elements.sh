@@ -64,18 +64,15 @@
     if [[ $selected == 1 ]]; then 
       #This is Option 1
       #Type Your command here
-      :
+
     elif [[ $selected == 2 ]]; then 
       #This is Option 2
       #Type Your command here
-      :
-    elif [[ $selected == 3 ]]; then    # You can copy/paste this for more options, change the 3 to 4
+
+    elif [[ $selected == 3 ]]; then # Copy/paste to get more options, change 3 to 4
       #This is Option 3
       #Type Your command here
-      :
   fi
   }
 
   source bmenu -t "Menu Title" -s "[SubTitle]" -o "Option 1,Option 2,Option 3"
-
-
