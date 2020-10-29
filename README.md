@@ -24,16 +24,16 @@ bash install.sh
 -h, --help               Show brief help
 -t, --title              Edit the title
 -s, --subtitle           Edit the subtitle
--o, --option             Edit all the options (Put a space between them)
+-o, --option             Edit all the options (Put a comma between them)
 -l, --link               Link your command file (see further)
 
 ```
-<p> Add "" after an arguments if there is more than one word </p>
-<p> If you want a space in an option, replace that space with / </p>
+<p> Add "" after an arguments if there is more than one word.</p>
+<p> Please, put a comma "," between the different options.</p>
 <p> This input created the menu above </p>
 
 ```bash
-./~/.bmenu -t "My First Menu" -s "[Use arrows to move]" -o "Exit hadrienaka.fr Twitter" -l MyFirstMenu.sh
+./~/.bmenu -t "My First Menu" -s "[Use arrows to move]" -o "Exit,hadrienaka.fr,Twitter" -l MyFirstMenu.sh
 ```
 
 ### Add commands :
