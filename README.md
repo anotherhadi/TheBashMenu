@@ -29,26 +29,29 @@ bash install.sh
 
 ```
 <p> Add "" after an arguments if there is more than one word.</p>
-<p> Please, put a comma "," between the different options.</p>
-<p> This input created the menu above </p>
+<p> Whith the -o,please, put a comma "," between the different options.</p>
+<p> This input created the menu above : </p>
 
 ```bash
 ./~/.bmenu -t "My First Menu" -s "[Use arrows to move]" -o "Exit,hadrienaka.fr,Twitter" -l MyFirstMenu.sh
 ```
 
 ### Add commands :
-<p> Create a new file (.sh), then paste:</p>
+<p> Create a new bash file (.sh), then paste:</p>
 
 ```bash
 enter () {
   if [[ $selected == 1 ]]; then 
-    echo "By HadrienAka"
+      #This is Option 1
+      #Type Your command here
 
   elif [[ $selected == 2 ]]; then 
-    open https://github.com/HadrienAka
+      #This is Option 2
+      #Type Your command here
 
-  elif [[ $selected == 3 ]]; then 
-    open https://twitter.com/HadrienAka
+  elif [[ $selected == 3 ]]; then # Copy/paste this for more options, change the 3 to 4
+      #This is Option 3
+      #Type Your command here
 
 fi
 }
