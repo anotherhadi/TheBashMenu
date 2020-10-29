@@ -61,7 +61,15 @@ while test $# -gt 0; do
   printf "\n\e[1;92m-l, --link            \e[0m\e[1;77mLink another command file\e[0m"
   printf "\n\e[1;92m-a, --alternative     \e[0m\e[1;77mDisplay an alternative menu (Put -a at the end of the command)\e[0m"
   printf "\n"
-  printf "\n\e[0;92m? \e[0m\e[1;77mMore information :  \e[0;96mhttps://github.com/hadrienaka/TheBashMenu \e[0m"
+  printf "\n\e[0;92m? \e[0m\e[1;77mMore information\e[0;96m on the github page.\e[0m"
+  printf "\n\e[0;92m? \e[0m\e[1;77mDo you want to open it?\e[0;96m [y/n]\e[0m"
+  read -n1 yn
+  if [[ $yn == y ]]; then
+    open https://github.com/hadrienaka/TheBashMenu
+    echo
+  elif [[ $yn == "n" ]]; then
+    :
+  fi
   echo
       exit 0
       ;;
