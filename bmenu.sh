@@ -106,6 +106,9 @@ fi
 
 tput sc
 tput civis
+option=$( echo $option | tr \   / )
+option=$( echo $option | tr ,  \  )
+
 i=1;
 for command in $option
 do
@@ -156,6 +159,11 @@ done
 selected=1
 i=$((i - 1));
 
+enterbis () {
+bis=$(( $i + 2 ))
+printf clear i times + /n base plus titre
+}
+
 ############################## TITLE
 
 thetitle () {
@@ -174,7 +182,7 @@ elif [[ $t == B ]]; then
 selected=$(($selected + 1))
 display1
 elif [[ $t == "" ]]; then 
-enter
+enterbis ; enter
 fi
 done
 }
@@ -233,7 +241,7 @@ elif [[ $t == B ]]; then
 selected=$(($selected + 1))
 display2
 elif [[ $t == "" ]]; then 
-enter
+enterbis ; enter
 fi
 done
 }
@@ -300,7 +308,7 @@ elif [[ $t == B ]]; then
 selected=$(($selected + 1))
 display3
 elif [[ $t == "" ]]; then 
-enter
+enterbis ; enter
 fi
 done
 }
@@ -385,7 +393,7 @@ elif [[ $t == B ]]; then
 selected=$(($selected + 1))
 display4
 elif [[ $t == "" ]]; then 
-enter
+enterbis ; enter
 fi
 done
 }
@@ -490,7 +498,7 @@ elif [[ $t == B ]]; then
 selected=$(($selected + 1))
 display5
 elif [[ $t == "" ]]; then 
-enter
+enterbis ; enter
 fi
 done
 }
@@ -617,7 +625,7 @@ elif [[ $t == B ]]; then
 selected=$(($selected + 1))
 display6
 elif [[ $t == "" ]]; then 
-enter
+enterbis ; enter
 fi
 done
 }
@@ -768,7 +776,7 @@ elif [[ $t == B ]]; then
 selected=$(($selected + 1))
 display7
 elif [[ $t == "" ]]; then 
-enter
+enterbis ; enter
 fi
 done
 }
@@ -945,7 +953,7 @@ elif [[ $t == B ]]; then
 selected=$(($selected + 1))
 display8
 elif [[ $t == "" ]]; then 
-enter
+enterbis ; enter
 fi
 done
 }
@@ -1150,7 +1158,7 @@ elif [[ $t == B ]]; then
 selected=$(($selected + 1))
 display9
 elif [[ $t == "" ]]; then 
-enter
+enterbis ; enter
 fi
 done
 }
@@ -1385,7 +1393,7 @@ elif [[ $t == B ]]; then
 selected=$(($selected + 1))
 display10
 elif [[ $t == "" ]]; then 
-enter
+enterbis ; enter
 fi
 done
 }
