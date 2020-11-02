@@ -2,7 +2,7 @@
 ![](menu.gif)
 #### A very useful script allowing you to create your own menu.
 <p>Create your own beautiful menu with a simple bash file, add a title, a subtitle and
-add up to 15 options !</p>
+add up to 15 options with the default menu and 20 with the alternative one!</p>
 
 ### Informations:
 <p>There is a file named "elements.sh" containing different examples of input, output, reading functions in the same graphic style as "bmenu". You will also find "menuexample.sh", feel free to modify it to create your first bmenu. Once modified, type "bash menuexample.sh" to try it.</p>
