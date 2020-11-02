@@ -18,11 +18,17 @@
 ###              
 
 ############################################ EXIT IF NO ARGUMENTS
+version=1.0
 
 empty () {
+upversion=$(curl -s -L https://hadrienaka.fr/update.txt ) 
 printf "\e[0;92m✓ \e[0m\e[1;77mThe Bash Menu\e[0;96m [v1.0]\e[0m"
-printf "\n\e[0;92m? \e[0m\e[1;77mTo update bmenu type :\e[0;96m bmenu -u\e[0m"
-printf "\n\e[0;92m? \e[0m\e[1;77mAnd to get help type :\e[0;96m bmenu -h\e[0m"
+if [[ $version == $upversion ]]; then 
+printf "\n\e[0;92m✓ \e[0m\e[1;77mbmenu is up to date\e[0m"
+else
+printf "\n\e[0;91mx \e[0m\e[1;77mThere is a new update, please type :\e[0;96m bmenu -u\e[0m"
+fi
+printf "\n\e[0;92m? \e[0m\e[1;77mTo get help type :\e[0;96m bmenu -h\e[0m"
 echo
 exit 0
 }
@@ -129,6 +135,12 @@ while test $# -gt 0; do
 
     -u|--update)
       shift
+      upversion=$(curl -s -L https://hadrienaka.fr/update.txt ) 
+      if [[ $version == $upversion ]]; then 
+        printf "\e[0;92m✓ \e[0m\e[1;77mbmenu is already up to date\e[0m"
+        echo
+        exit
+      else
         git clone https://github.com/hadrienaka/thebashmenu &>/dev/null
         cd TheBashMenu
         chmod +x bmenu.sh
@@ -136,8 +148,11 @@ while test $# -gt 0; do
         sudo mv bmenu.sh /usr/local/bin/bmenu
         cd ..
         rm -rf TheBashMenu
-        printf "\n\e[0;92m✓ \e[0m\e[1;77mSuccessfully Updated\e[0m"
+        printf "\e[0;92m✓ \e[0m\e[1;77mSuccessfully Updated\e[0m"
+        echo
         exit
+      fi
+
       shift
       ;;
     
