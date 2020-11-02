@@ -129,7 +129,7 @@ while test $# -gt 0; do
 
     -u|--update)
       shift
-        git clone https://github.com/hadrienaka/thebashmenu
+        git clone https://github.com/hadrienaka/thebashmenu &>/dev/null
         cd TheBashMenu
         chmod +x bmenu.sh
         sudo rm /usr/local/bin/bmenu
