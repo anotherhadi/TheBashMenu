@@ -36,7 +36,7 @@ bash install.sh
   fi
   }
 
-  source ~/.bmenu -t "Menu Title" -s "[SubTitle]" -o "Option 1,Option 2,Option 3"
+  source bmenu -t "Menu Title" -s "[SubTitle]" -o "Option 1,Option 2,Option 3"
 
 ```
 
@@ -57,6 +57,7 @@ bash install.sh
 -o, --option             Edit all the options (Put a comma between them)
 -l, --link               Link another command file
 -a, --alternative        Display an alternative menu (Put -a at the end of the command)
+-u, --update             Update bmenu
 
 ! If you link the menu with the command of another bash file, put "export -f" on your commandnamefile.sh and the arguments "-l commandnamefile.sh" to the bmenu command.
 ```
