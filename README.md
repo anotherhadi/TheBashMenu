@@ -1,4 +1,4 @@
-# The Bash Menu
+# The Bash Menu [v1.0]
 ![](menu.gif)
 #### A very useful script allowing you to create your own menu.
 <p>Create your own beautiful menu with a simple bash file, add a title, a subtitle and
