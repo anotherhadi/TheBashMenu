@@ -3,9 +3,8 @@ rm README.md
 rm menuexemple.gif
 rm menu.gif
 rm menualternative.jpg
-mv bmenu.sh ~/.bmenu
-chmod +x ~/.bmenu
-########################### ADD TO PATH
+chmod +x bmenu.sh
+mv bmenu.sh /usr/local/bin/bmenu
 printf "\n"
 printf "\n\e[0;92m✓ \e[0m\e[1;77mWell done! \"bmenu\" is now ready.\e[0m"
 printf "\n"
