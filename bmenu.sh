@@ -131,8 +131,8 @@ while test $# -gt 0; do
         git clone https://github.com/hadrienaka/thebashmenu
         cd TheBashMenu
         chmod +x bmenu.sh
-        rm /usr/local/bin/bmenu
-        mv bmenu.sh /usr/local/bin/bmenu
+        sudo rm /usr/local/bin/bmenu
+        sudo mv bmenu.sh /usr/local/bin/bmenu
         cd ..
         rm -rf TheBashMenu
         printf "\n\e[0;92m✓ \e[0m\e[1;77mSuccessfully Updated\e[0m"
