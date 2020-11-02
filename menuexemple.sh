@@ -11,4 +11,4 @@
   fi
   }
 
-  source ~/.bmenu -t "TheBashMenu" -s "[use arrows to move, enter to select]" -o "My Github,My Twitter,My Website" #-a #Delete the # before "-a" to display the alternative menu.
+  source bmenu -t "TheBashMenu" -s "[use arrows to move, enter to select]" -o "My Github,My Twitter,My Website" #-a #Delete the # before "-a" to display the alternative menu.

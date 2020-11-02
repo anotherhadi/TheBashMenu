@@ -124,6 +124,21 @@ while test $# -gt 0; do
         d=1
       shift
       ;;
+
+    -u|--update)
+      shift
+        git clone https://github.com/hadrienaka/thebashmenu
+        cd TheBashMenu
+        chmod +x bmenu.sh
+        rm /usr/local/bin/bmenu
+        mv bmenu.sh /usr/local/bin/bmenu
+        cd ..
+        rm -rf TheBashMenu
+        printf "\n\e[0;92m✓ \e[0m\e[1;77mSuccessfully Updated\e[0m"
+        exit
+      shift
+      ;;
+    
     *)
       break
       ;;
@@ -133,8 +148,7 @@ done
 
 ################################################## CHECK IF -l & LINKFILE EXIST
 
-if [ -z "$linkfile" ]
-then
+if [ -z "$linkfile" ]; then
   type enter &>/dev/null && : || printf "\e[0;91mx \e[0m\e[1;77menter() not find !\e[0m\n"
 else
   source $linkfile &>/dev/null
