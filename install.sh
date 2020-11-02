@@ -4,7 +4,8 @@ rm menuexemple.gif
 rm menu.gif
 rm menualternative.jpg
 chmod +x bmenu.sh
-mv bmenu.sh /usr/local/bin/bmenu
+printf "\n\e[0;92m+ \e[0m\e[1;77mYou need to enter your sudo password to add bmenu to the Path :\e[0;96m\e[0m"
+sudo mv bmenu.sh /usr/local/bin/bmenu
 printf "\n"
 printf "\n\e[0;92m✓ \e[0m\e[1;77mWell done! \"bmenu\" is now ready.\e[0m"
 printf "\n"
