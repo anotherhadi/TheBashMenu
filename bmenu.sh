@@ -233,6 +233,26 @@ do
     option15=$command
     option15=$( echo $option15 | tr /  \  )
 
+    elif [[ $i == 16 ]]; then
+    option16=$command
+    option16=$( echo $option16 | tr /  \  )
+
+    elif [[ $i == 17 ]]; then
+    option17=$command
+    option17=$( echo $option17 | tr /  \  )
+
+    elif [[ $i == 18 ]]; then
+    option18=$command
+    option18=$( echo $option18 | tr /  \  )
+
+    elif [[ $i == 19 ]]; then
+    option19=$command
+    option19=$( echo $option19 | tr /  \  )
+
+    elif [[ $i == 20 ]]; then
+    option20=$command
+    option20=$( echo $option20 | tr /  \  )
+
     fi
 
     i=$((i + 1));
@@ -432,48 +452,73 @@ othermenu ()
   if [[ $i -gt 1 ]] || [[ $i = 1 ]]; then
   printf "\n\e[0;96m-1 \e[0m\e[0;77m$option1\e[0m"
   fi
+  if [[ "$i" -gt "11" ]] || [ "$i" == "11" ]; then
+  printf "     \e[0;96m-11 \e[0m\e[0;77m$option11\e[0m"
+  fi
+
   if [[ $i -gt 2 ]] || [[ $i = 2 ]]; then
   printf "\n\e[0;96m-2 \e[0m\e[0;77m$option2\e[0m"
   fi
+  if [[ "$i" -gt "12" ]] || [ "$i" == "12" ]; then
+  printf "     \e[0;96m-12 \e[0m\e[0;77m$option12\e[0m"
+  fi
+
   if [[ $i -gt 3 ]] || [[ $i = 3 ]]; then
   printf "\n\e[0;96m-3 \e[0m\e[0;77m$option3\e[0m"
   fi
+  if [[ "$i" -gt "13" ]] || [ "$i" == "13" ]; then
+  printf "     \e[0;96m-13 \e[0m\e[0;77m$option13\e[0m"
+  fi
+
   if [[ $i -gt 4 ]] || [[ $i = 4 ]]; then
   printf "\n\e[0;96m-4 \e[0m\e[0;77m$option4\e[0m"
   fi
+   if [[ "$i" -gt "14" ]] || [ "$i" == "14" ]; then
+  printf "     \e[0;96m-14 \e[0m\e[0;77m$option14\e[0m"
+  fi
+
   if [[ $i -gt 5 ]] || [[ $i = 5 ]]; then
   printf "\n\e[0;96m-5 \e[0m\e[0;77m$option5\e[0m"
   fi
+   if [[ "$i" -gt "15" ]] || [ "$i" == "15" ]; then
+  printf "     \e[0;96m-15 \e[0m\e[0;77m$option15\e[0m"
+  fi
+
   if [[ $i -gt 6 ]] || [[ $i = 6 ]]; then
   printf "\n\e[0;96m-6 \e[0m\e[0;77m$option6\e[0m"
   fi
+   if [[ "$i" -gt "16" ]] || [ "$i" == "16" ]; then
+  printf "     \e[0;96m-16 \e[0m\e[0;77m$option16\e[0m"
+  fi
+
   if [[ $i -gt 7 ]] || [[ $i = 7 ]]; then
   printf "\n\e[0;96m-7 \e[0m\e[0;77m$option7\e[0m"
   fi
+   if [[ "$i" -gt "17" ]] || [ "$i" == "17" ]; then
+  printf "     \e[0;96m-17 \e[0m\e[0;77m$option17\e[0m"
+  fi
+
   if [[ $i -gt 8 ]] || [[ $i = 8 ]]; then
   printf "\n\e[0;96m-8 \e[0m\e[0;77m$option8\e[0m"
   fi
+   if [[ "$i" -gt "18" ]] || [ "$i" == "18" ]; then
+  printf "     \e[0;96m-18 \e[0m\e[0;77m$option18\e[0m"
+  fi
+
   if [[ $i -gt 9 ]] || [[ $i = 9 ]]; then
   printf "\n\e[0;96m-9 \e[0m\e[0;77m$option9\e[0m"
   fi
+   if [[ "$i" -gt "19" ]] || [ "$i" == "19" ]; then
+  printf "     \e[0;96m-19 \e[0m\e[0;77m$option19\e[0m"
+  fi
+
   if [[ "$i" -gt "10" ]] || [ "$i" == "10" ]; then
   printf "\n\e[0;96m-10 \e[0m\e[0;77m$option10\e[0m"
   fi
-  if [[ "$i" -gt "11" ]] || [ "$i" == "11" ]; then
-  printf "\n\e[0;96m-11 \e[0m\e[0;77m$option11\e[0m"
+   if [[ "$i" -gt "20" ]] || [ "$i" == "20" ]; then
+  printf "     \e[0;96m-20 \e[0m\e[0;77m$option20\e[0m"
   fi
-  if [[ "$i" -gt "12" ]] || [ "$i" == "12" ]; then
-  printf "\n\e[0;96m-12 \e[0m\e[0;77m$option12\e[0m"
-  fi
-  if [[ "$i" -gt "13" ]] || [ "$i" == "13" ]; then
-  printf "\n\e[0;96m-13 \e[0m\e[0;77m$option13\e[0m"
-  fi
-  if [[ "$i" -gt "14" ]] || [ "$i" == "14" ]; then
-  printf "\n\e[0;96m-14 \e[0m\e[0;77m$option14\e[0m"
-  fi
-  if [[ "$i" -gt "15" ]] || [ "$i" == "15" ]; then
-  printf "\n\e[0;96m-15 \e[0m\e[0;77m$option15\e[0m"
-  fi
+
 echo
 
  printf "\n\e[0;92m? \e[0m\e[1;77mOption :\e[0;96m\e[0m"
