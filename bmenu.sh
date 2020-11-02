@@ -20,8 +20,9 @@
 ############################################ EXIT IF NO ARGUMENTS
 
 empty () {
-printf "\n\e[0;91mx \e[0m\e[1;77mAdd arguments. \e[0;96m [type \"bmenu --help\" to get help]\e[0m"
-printf "\n"
+printf "\e[0;92m✓ \e[0m\e[1;77mThe Bash Menu\e[0;96m [v1.0]\e[0m"
+printf "\n\e[0;92m✓ \e[0m\e[1;77mTo update bmenu type :\e[0;96m [$ bmenu -u]\e[0m"
+printf "\n\e[0;91m? \e[0m\e[1;77mtype \"bmenu --help\" to get help] \e[0;96m\e[0m"
 echo
 exit 0
 }
