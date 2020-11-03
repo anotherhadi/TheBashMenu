@@ -20,28 +20,18 @@ bash install.sh
 <p> Create a new bash file (.sh), then paste:</p>
 
 ```bash
-  enter () {
-    if [[ $selected == 1 ]]; then 
-      #This is Option 1
-      #Type Your command here
+source bmenu -t "Menu Title" -s "[SubTitle]" -o "Option 1,Option 2,Option 3"
 
-    elif [[ $selected == 2 ]]; then 
-      #This is Option 2
-      #Type Your command here
-
-    elif [[ $selected == 3 ]]; then # Copy/paste to get more options, change 3 to 4
-      #This is Option 3
-      #Type Your command here
-  fi
-  }
-
-  source bmenu -t "Menu Title" -s "[SubTitle]" -o "Option 1,Option 2,Option 3"
-
+case ${selected} in
+	1) TypeYourCommandHere;;
+	2) TypeYourCommandHere;;
+	3) TypeYourCommandHere;;
+esac
 ```
 
 ```diff
 ! Put a comma between each options (--option | -o)
-! The function need to be call "enter" and the var "selected".
+! The variable need to be call "selected".
 ```
 
 ### Arguments:
