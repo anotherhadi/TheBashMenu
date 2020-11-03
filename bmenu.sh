@@ -246,7 +246,7 @@ alternativemenu ()
   printf "\n\e[0;92m? \e[0m\e[1;77mOption :\e[0;96m\e[0m"
   read -r -n2 selected
   tput cnorm
-  enter
+  break
 }
 
 ###################### 9 - Start bmenu
