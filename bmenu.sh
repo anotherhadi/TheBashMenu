@@ -234,12 +234,11 @@ done
 alternativemenu ()
 {
   thetitle
-  printf "\n"
   i=1;
   for command in $option
   do
     command=$( echo "$command" | tr /  \  )
-    printf "\n\r\e[0;96m%s\e[0m -  %s                                   " "$i" "$command"
+    printf "\n\r\e[0;96m-%s\e[0m  %s                                   " "$i" "$command"
     i=$((i + 1))
   done
   echo
