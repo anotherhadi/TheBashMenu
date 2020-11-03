@@ -1,10 +1,10 @@
 # The Bash Menu [v1.1]
 ![](menu.gif)
 #### A very useful script allowing you to create your own menu.
-<p>Create your own beautiful menu with a simple bash file, add a title, a subtitle, your options and your commands!</p>
+<p>Easily create your own menu, which uses the directional keys. Quickly add your title, options and commands and you're good to go!</p>
 
 ### Informations:
-<p>There is a file named "elements.sh" containing different examples of input, output, reading functions in the same graphic style as "bmenu". You will also find "menuexample.sh", feel free to modify it to create your first bmenu. Once modified, type "bash menuexample.sh" to try it.</p>
+<p>There is a file named "elements.sh" containing different examples of input, output, reading functions in the same graphic style as "bmenu". You will also find "menuexample.sh", feel free to modify it to create your first menu. Once modified, type "bash menuexample.sh" to try it.</p>
 <p>Work on : MacOs, KaliLinux [Probably more, tell me if that's the case]</p>
 
 ### Install:
@@ -17,7 +17,7 @@ bash install.sh
 ### Create Your Own Menu :
 ![](menuexemple.gif)
 
-<p> Create a new bash file (.sh), then paste:</p>
+<p> Create a new bash file, then paste:</p>
 
 ```bash
 source bmenu -t "Menu Title" -s "[SubTitle]" -o "Option 1,Option 2,Option 3"
@@ -30,29 +30,25 @@ esac
 ```
 
 ```diff
-! Put a comma between each options (--option | -o)
-! The variable need to be call "selected".
+! Put a comma between each options
 ```
 
 ### Arguments:
 
 ```diff
-! Arguments :
-
 -h, --help               Show brief help
 -t, --title              Edit the title
 -s, --subtitle           Edit the subtitle
 -o, --option             Edit all the options (Put a comma between them)
 -a, --alternative        Display an alternative menu (Put -a at the end of the command)
--u, --update             Update bmenu
-
+-u, --update             Download the latest version
 ```
 
 ### Alternative Menu
 ![](menualternative.jpg)
 
 <p> The alternative menu may be a better choice when you have more than 10 options </p>
-<p> To display an alternative menu, just add "-a" or "--alternative" at the end of your command. </p>
+<p> To display an alternative menu, just add "-a" at the end of your command. </p>
 
 ![Twitter Follow](https://img.shields.io/twitter/follow/hadrienaka?label=%40HadrienAka&logo=twitter&logoColor=ffffff&style=for-the-badge)
 ![GitHub followers](https://img.shields.io/github/followers/hadrienaka?color=9F9F9F&label=%40HadrienAka&logo=github&style=for-the-badge)
