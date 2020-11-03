@@ -149,7 +149,6 @@ while test $# -gt 0; do
   esac
 done
 
-type enter &>/dev/null && : || printf "\e[0;91mx \e[0m\e[1;77menter() not find !\e[0m\n"
 tput civis
 
 ###################### 4 - TITLE
@@ -209,7 +208,7 @@ pressenter () {
   tput sc
   tput cnorm
   tput ed
-  enter
+  break
 }
 
 ###################### 7 - SELECTION

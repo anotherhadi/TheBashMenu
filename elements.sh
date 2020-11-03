@@ -60,19 +60,10 @@
 
   # Menu Template :
 
-  enter () {
-    if [[ $selected == 1 ]]; then 
-      #This is Option 1
-      #Type Your command here
+source bmenu -t "TheBashMenu" -s "[use arrows to move, enter to select]" -o "My Github,My Twitter,My Website" #-a #Delete the # before "-a" to display the alternative menu.
 
-    elif [[ $selected == 2 ]]; then 
-      #This is Option 2
-      #Type Your command here
-
-    elif [[ $selected == 3 ]]; then # Copy/paste to get more options, change 3 to 4
-      #This is Option 3
-      #Type Your command here
-  fi
-  }
-
-  source bmenu -t "Menu Title" -s "[SubTitle]" -o "Option 1,Option 2,Option 3" #-a #Delete the # before "-a" to display the alternative menu.
+case ${selected} in
+	1) open https://github.com/hadrienaka;;
+	2) open https://twitter.com/hadrienaka;;
+	3) open https://hadrienaka.fr;;
+esac
