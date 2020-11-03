@@ -26,7 +26,7 @@ d=0
 
 empty () {
 upversion=$(curl -s -L https://hadrienaka.fr/update.txt ) 
-printf "\e[0;92m✓ \e[0m\e[1;77mThe Bash Menu\e[0;96m [v1.0]\e[0m"
+printf "\e[0;92m✓ \e[0m\e[1;77mThe Bash Menu\e[0;96m [v%s]\e[0m" "$version"
 if [[ $version == "$upversion" ]]; then 
 printf "\n\e[0;92m✓ \e[0m\e[1;77mbmenu is up to date\e[0m"
 else
