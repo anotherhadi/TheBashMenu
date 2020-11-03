@@ -239,12 +239,13 @@ alternativemenu ()
   for command in $option
   do
     command=$( echo "$command" | tr /  \  )
-    printf "\n\r%s -  %s                                   " "$i" "$command"
+    printf "\n\r\e[0;96m%s\e[0m -  %s                                   " "$i" "$command"
     i=$((i + 1))
   done
   echo
-  printf "\n\e[0;92m? \e[0m\e[1;77mOption :\e[0;96m\e[0m"
-  read -r -n2 selected
+  printf "\n\e[0;92m? \e[0m\e[1;77mOption : \e[0;96m"
+  read -r selected
+  printf "\e[0m"
   tput cnorm
 }
 
