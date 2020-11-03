@@ -1,15 +1,20 @@
 
-##########################################################
-####### Created By @HadrienAka  #    Elements            #
-##########################################################
-
-  # ________________________HELP________________________
-
-  #  To get help, type "bmenu -h" or see the github repo:
-  #  https://github.com/hadrienaka/TheBashMenu
-
-
-  #______________________ELEMENTS______________________
+#####################################################################
+#####################################################################
+####### Created By @HadrienAka ####### Created By @HadrienAka #######
+#####################################################################
+#####################################################################
+####
+#### LEARN MORE ABOUT BMENU ON GITHUB.COM/HADRIENAKA/THEBASHMENU
+#### If you like bmenu, please feel free to leave a star!
+####
+#### SUMMARY :
+####
+#### 1. OutPut
+#### 2. InPut
+#### 3. Menu Template
+####
+###################### 1 - OutPut
 
   # Information :
 
@@ -26,7 +31,7 @@
   printf "\n\r\e[1;96m> Option Select                      \e[0m"
   printf "\n\r\e[0;0m  Option Not Select                   \e[0m"
 
-  ######## Input :
+###################### 2 - InPut
 
   # Any input
 
@@ -56,14 +61,12 @@
 
 
 
- #____________________Menu Template___________________
+###################### 3 - Menu Template
 
-  # Menu Template :
-
-source bmenu -t "TheBashMenu" -s "[use arrows to move, enter to select]" -o "My Github,My Twitter,My Website" #-a #Delete the # before "-a" to display the alternative menu.
+source bmenu -t "Menu Title" -s "[SubTitle]" -o "Option 1,Option 2,Option 3"
 
 case ${selected} in
-	1) open https://github.com/hadrienaka;;
-	2) open https://twitter.com/hadrienaka;;
-	3) open https://hadrienaka.fr;;
+	1) TypeYourCommandHere;;
+	2) TypeYourCommandHere;;
+	3) TypeYourCommandHere;;
 esac
