@@ -4,18 +4,7 @@
 ####### Created By @HadrienAka ####### Created By @HadrienAka ####### Created By @HadrienAka #
 ##############################################################################################
 ##############################################################################################
-###
-###              
-###########################################################
-###              
-### Look, I spent more than 72 hours on this code.
-### I have no idea how it works, but it does works.
-### If ANYTHING happens to it, YOU will be the one
-### who will spend the next many hours trying to fix it.
-###              
-###########################################################
-###              
-###              
+            
 
 ############################################ EXIT IF NO ARGUMENTS
 version=1.0
